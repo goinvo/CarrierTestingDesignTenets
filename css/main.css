@@ -1,6 +1,7 @@
 html {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  overflow: auto; }
 
 body {
   font-family: 'Hind', sans-serif;
@@ -9,18 +10,22 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  overflow: auto; }
 
 .container {
   width: 768px;
   margin-left: calc(50% - 424px);
   background-color: white;
-  padding: 40px;
-  height: 100%; }
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100%;
+  overflow: auto; }
   .container .content-container {
     width: 600px;
     margin-left: calc(50% - 300px); }
 
+/* Font treatments (< 6)*/
 h1 {
   font-size: 2.5em;
   text-align: center;
@@ -31,16 +36,49 @@ h2 {
   text-align: center;
   font-weight: 600; }
 
+h3 {
+  font-size: 1em;
+  font-weight: 600; }
+
+p {
+  font-size: 1em; }
+
+/* Graphic Elements*/
 .card-container {
-  border: 1px solid #4A4A4A;
+  border: 1px solid #E0E0E0;
   border-radius: 5px;
   width: 600px;
   margin-left: calc(50% - 300px); }
   .card-container ul {
-    list-style: none; }
-    .card-container ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .card-container ul li div {
+      border-bottom: 1px solid #E0E0E0;
       padding-top: 15px;
       padding-bottom: 15px; }
+      .card-container ul li div p {
+        margin-left: 20px;
+        margin-bottom: 0;
+        margin-top: 0; }
+    .card-container ul li:last-child div {
+      border-bottom: 0; }
 
-.bold {
-  font-weight: 600; }
+.button {
+  border-radius: 5px;
+  height: 55px;
+  width: 250px;
+  background-color: #4A4A4A; }
+  .button p {
+    text-align: center;
+    color: white; }
+
+.line {
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  height: 15px; }
+
+.placeholder {
+  height: 300px;
+  width: 100%;
+  background-color: #E0E0E0; }
