@@ -11,6 +11,21 @@ body {
   overflow: hidden;
   margin: 0; }
 
-  p {
-    color:blue;
-  }
+h1 {
+  font-size: 2.5em;
+  text-align: center; }
+
+h2 {
+  font-size: 1em;
+  text-align: center; }
+
+.content-contain {
+  border: 1px solid #4A4A4A;
+  border-radius: 5px;
+  width: 500px;
+  margin-left: calc(50% - 250px); }
+  .content-contain ul {
+    list-style: none; }
+    .content-contain ul li {
+      padding-top: 15px;
+      padding-bottom: 15px; }
