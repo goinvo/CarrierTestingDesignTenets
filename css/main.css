@@ -1,31 +1,46 @@
 html {
   height: 100%;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
   color: #4A4A4A;
   height: 100%;
   width: 100%;
-  overflow: hidden;
-  margin: 0; }
+  margin: 0;
+  background-color: #F8F8F8; }
+
+.container {
+  width: 768px;
+  margin-left: calc(50% - 424px);
+  background-color: white;
+  padding: 40px;
+  height: 100%; }
+  .container .content-container {
+    width: 600px;
+    margin-left: calc(50% - 300px); }
 
 h1 {
   font-size: 2.5em;
-  text-align: center; }
+  text-align: center;
+  font-weight: 600; }
 
 h2 {
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+  font-weight: 600; }
 
-.content-contain {
+.card-container {
   border: 1px solid #4A4A4A;
   border-radius: 5px;
-  width: 500px;
-  margin-left: calc(50% - 250px); }
-  .content-contain ul {
+  width: 600px;
+  margin-left: calc(50% - 300px); }
+  .card-container ul {
     list-style: none; }
-    .content-contain ul li {
+    .card-container ul li {
       padding-top: 15px;
       padding-bottom: 15px; }
+
+.bold {
+  font-weight: 600; }
