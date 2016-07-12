@@ -1,8 +1,8 @@
 {
-  "name": "updox_style_guide",
+  "name": "CarrierTestingDesignTenets",
   "version": "0.1.0",
-  "description": "updox_style_guide backend",
-  "repository": "updox_style_guide",
+  "description": "CarrierTestingDesignTenets backend",
+  "repository": "CarrierTestingDesignTenets",
   "dependencies": {
     "express": "^4.13.3",
     "grunt": "^0.4.5",

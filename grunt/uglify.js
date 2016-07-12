@@ -12,6 +12,6 @@ module.exports = {
 			dest: '_build',
 			ext: '.min.js'
 		}]
-		
+
 	}
 }
