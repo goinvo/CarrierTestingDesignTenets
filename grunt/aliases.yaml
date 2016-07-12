@@ -1,0 +1,8 @@
+default: 
+  - 'concurrent:watch'
+
+build:
+  - 'sass'
+  - 'cssmin'
+  - 'uglify'
+

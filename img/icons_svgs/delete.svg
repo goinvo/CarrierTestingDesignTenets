@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="390.149px" height="1464.934px" viewBox="0 0 390.149 1464.934" style="enable-background:new 0 0 390.149 1464.934;"
+	 xml:space="preserve">
+<g id="delete">
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M162.069,449.203c-0.064-1.175,0.846-2.127,2.04-2.127h11.679c1.191,0,2.104,0.948,2.039,2.127
+				l-0.765,13.813c-0.064,1.173-1.079,2.125-2.274,2.125h-9.681c-1.192,0-2.208-0.946-2.274-2.125L162.069,449.203z"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);">
+			<defs>
+				<rect id="SVGID_3_" x="-330.167" y="-1734.089" width="7152.59" height="4691.833"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<path style="clip-path:url(#SVGID_4_);fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;" d="M162.069,449.203
+				c-0.064-1.175,0.846-2.127,2.04-2.127h11.679c1.191,0,2.104,0.948,2.039,2.127l-0.765,13.813
+				c-0.064,1.173-1.079,2.125-2.274,2.125h-9.681c-1.192,0-2.208-0.946-2.274-2.125L162.069,449.203z"/>
+			<use xlink:href="#SVGID_3_"  style="overflow:visible;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;"/>
+		</g>
+		
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;fill-rule:evenodd;clip-rule:evenodd;fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;"/>
+	</g>
+	
+		<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="172.147" y1="451.737" x2="172.147" y2="459.897"/>
+	
+		<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="168.155" y1="451.737" x2="168.155" y2="459.897"/>
+	
+		<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="166.926" y1="443.58" x2="172.781" y2="443.58"/>
+	
+		<line style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;" x1="160.702" y1="447.076" x2="178.898" y2="447.076"/>
+</g>
+<g id="Layer_1">
+</g>
+</svg>
