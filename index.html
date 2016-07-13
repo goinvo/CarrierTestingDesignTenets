@@ -21,17 +21,17 @@
 				<script id="patient_template" type="text/template">
 					{{#patient}}
 
-						<h1>{{name}}, you {{carrierStatus}} {{diseaseCount}}</h1>
+						<h1>{{name}}, you are {{carrierStatus}} for {{diseaseCount}}</h1>
 
 						<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
 						<br>Each child's risk of inheriting a disease is undetermined until we test your partner.</h2>
 
 						<div class="card-container">
-								<ul>
+								<ul class="disease-list">
 									{{#disease}}
 										<li>
 											<div class="card-item">
-												<p><a href="#">{{name}}</a></p>
+												<a href="#">{{name}}</a>
 												<p>{{description}}</p>
 											</div>
 										</li>
@@ -60,12 +60,16 @@
 
 				<h2>To know your children's risk:</h2>
 
-				<a href="#"><div class="button">
-					<p>Request partner's test</p>
-				</div></a>
+				<a href="#">
+					<div class="button">
+						<p>Request partner's test</p>
+					</div>
+				</a>
 
 				<p>Until we know if your partner is a carrier for the same diseases as you, the risk to your children is undetermined.</p>
+
 				<div class="card-container">
+
 					<div class="risk-container">
 						<h2>If your partner IS NOT a carrier:</h2>
 						<p>Each child is unlikely to have the disease.</p>
@@ -83,6 +87,7 @@
 					</div>
 
 				</div>
+
 				<h2>Why should my partner BE tested?</h2>
 				<p>Some parents want to know their children's chance of inheriting a disease so that, if needed, they can:</p>
 				<ul class="bullet-list">

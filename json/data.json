@@ -2,8 +2,8 @@
   "patient":[
       {
         "name": "Beth",
-        "carrierStatus": "are a carrier",
-        "diseaseCount": "for 3 diseases",
+        "carrierStatus": "a carrier",
+        "diseaseCount": "3 diseases",
         "disease":[
           {
             "name": "Cystic Fibrosis",

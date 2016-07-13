@@ -56,20 +56,20 @@ a {
   border-radius: 5px;
   width: 600px;
   margin-left: calc(50% - 300px); }
-  .card-container ul {
+  .card-container .disease-list {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .card-container ul li div {
+    .card-container .disease-list li div {
       border-bottom: 1px solid #E0E0E0;
       padding-top: 15px;
       padding-bottom: 15px; }
-      .card-container ul li div p {
+      .card-container .disease-list li div p, .card-container .disease-list li div a {
         margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 0;
         margin-top: 0; }
-    .card-container ul li:last-child div {
+    .card-container .disease-list li:last-child div {
       border-bottom: 0; }
   .card-container .risk-container {
     display: inline-block;
