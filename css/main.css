@@ -25,23 +25,35 @@ body {
     width: 600px;
     margin-left: calc(50% - 300px); }
 
-/* Font treatments (< 6)*/
+/* Font treatments (keep < 6)*/
 h1 {
   font-size: 2.5em;
   text-align: center;
-  font-weight: 600; }
+  font-weight: 600;
+  margin-bottom: 0; }
 
 h2 {
   font-size: 1em;
-  text-align: center;
-  font-weight: 600; }
+  text-align: left;
+  font-weight: 600;
+  margin-top: 28px; }
 
-h3 {
-  font-size: 1em;
-  font-weight: 600; }
+.subheader {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px; }
 
 p {
-  font-size: 1em; }
+  font-size: 1em;
+  word-wrap: normal;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  word-break: keep-all;
+  white-space: pre-line; }
+
+a {
+  color: #0066CC; }
 
 /* Graphic Elements*/
 .card-container {
@@ -52,17 +64,39 @@ p {
   .card-container ul {
     list-style: none;
     margin: 0;
-    padding: 0; }
+    padding-left: 0; }
     .card-container ul li div {
       border-bottom: 1px solid #E0E0E0;
       padding-top: 15px;
       padding-bottom: 15px; }
       .card-container ul li div p {
         margin-left: 20px;
+        margin-right: 20px;
         margin-bottom: 0;
         margin-top: 0; }
     .card-container ul li:last-child div {
       border-bottom: 0; }
+  .card-container .risk-container {
+    display: inline-block;
+    width: 255px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: top; }
+    .card-container .risk-container img {
+      width: 180px;
+      height: auto;
+      margin-left: calc(50% - 90px); }
+    .card-container .risk-container h2 {
+      margin-bottom: 0;
+      margin-top: 13px; }
+    .card-container .risk-container p {
+      margin-top: 0; }
+      .card-container .risk-container p:first-of-type {
+        height: 78px; }
+  .card-container #divider {
+    display: inline-block;
+    height: 400px;
+    border-left: 1px solid #E0E0E0; }
 
 .button {
   border-radius: 5px;
@@ -71,7 +105,8 @@ p {
   background-color: #4A4A4A; }
   .button p {
     text-align: center;
-    color: white; }
+    color: white;
+    padding-top: 15px; }
 
 .line {
   border-bottom: 1px solid #E0E0E0;
