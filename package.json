@@ -13,6 +13,7 @@
     "grunt-sass": "^1.0.0",
     "jit-grunt": "^0.9.1",
     "load-grunt-config": "^0.17.2",
+    "mustache": "^2.2.1",
     "time-grunt": "^1.2.1"
   }
 }

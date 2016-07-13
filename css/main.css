@@ -44,11 +44,7 @@ h2 {
   margin-bottom: 30px; }
 
 p {
-  font-size: 1em;
-  word-wrap: normal;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none; }
+  font-size: 1em; }
 
 a {
   color: #0066CC;
