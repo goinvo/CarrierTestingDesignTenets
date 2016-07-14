@@ -1,14 +1,17 @@
 $( document ).ready(function() {
+  var $window = $(window),
+      $header = $('.header'),
+      $contactButton = $('#contact-button'),
+      $contactButtonContainer = $('#contact-button-container');
 
-  var wrap = $("#wrap");
+  $window.scroll(function(e) {
 
-  wrap.on("scroll", function(e) {
-
-    if (this.scrollTop > 50) {
-      console.log("scrolled!");
-      wrap.addClass("fix-contact");
+    if ($window.scrollTop() >= $contactButtonContainer.offset().top - 10) {
+      $contactButton.addClass("fix-contact");
+      $header.addClass('fix-contact');
     } else {
-      wrap.removeClass("fix-contact");
+      $contactButton.removeClass("fix-contact");
+      $header.removeClass('fix-contact');
     }
 
   });

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" href="../img/appcon.png"> <!-- update href to update icon --->
+<link rel="apple-touch-icon" href="../img/appcon.png"> <!-- update href to update icon -->
 <html>
 	<head>
 		<title>Carrier Testing Design Template</title>
@@ -13,20 +13,15 @@
 		<script type="text/javascript" src="json/data.json" ></script>
 	</head>
   <body>
-		<div class="container">
+		<div class="container" id="container">
 
-			<div id="wrap" class="wrap">
+			<header class="header"></header>
 
-				<div class="top-header"></div>
-
-				<div class="contact-container"></div>
-				
-<!-- Trying to get this to fix to the top after scroll -->
-				<div class="contact button">
-					<p>Contact Care Team</p>
-				</div>
-
-			</div>
+      <div class="contact-button-container" id="contact-button-container">
+        <div class="contact button" id="contact-button">
+    			<p>Contact Care Team</p>
+    		</div>
+      </div>
 
 			<div class="content-container">
 
@@ -140,6 +135,6 @@
 				<p>[Patient, sample, and laboratory information go here.]</p>
 
 			</div>
-		</div>
+    </div>
   </body>
 </html>

@@ -1,11 +1,17 @@
+html {
+  height: 100%; }
+
 body {
   font-family: 'Hind', sans-serif;
   font-weight: 300;
   color: #4A4A4A;
   margin: 0;
-  background-color: #F8F8F8; }
+  background-color: #F8F8F8;
+  height: 100%;
+  overflow-y: auto; }
 
 .container {
+  position: relative;
   width: 768px;
   margin-left: calc(50% - 424px);
   background-color: white;
@@ -41,28 +47,26 @@ a {
   text-decoration: none; }
 
 /* contact info */
-.top-header {
+.header {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 60px;
+  height: 75px;
   width: 100%;
-  background-color: #E0E0E0; }
-  .fix-contact .top-header {
-    background-color: #02A8A8; }
+  transition: background-color .2s; }
+  .header.fix-contact {
+    background-color: #E0E0E0; }
 
-.contact-container {
-  background-color: yellow;
-  height: 200px;
-  position: relative; }
+.contact-button-container {
+  height: 55px;
+  margin-bottom: 20px; }
 
 .contact {
-  position: absolute;
-  top: 150px;
-  left: 0px; }
-  .fix-contact .contact {
+  margin: 0 auto; }
+  .contact.fix-contact {
     position: fixed;
-    top: 10px; }
+    top: 10px;
+    left: calc(50% - (250px / 2)); }
 
 /* Graphic Elements*/
 .card-container {
@@ -113,14 +117,15 @@ a {
 
 .button {
   border-radius: 5px;
-  height: 55px;
   width: 250px;
+  height: 55px;
   background-color: #02A8A8; }
   .button p {
     text-align: center;
     color: white;
     padding-top: 15px;
-    font-style: normal; }
+    font-style: normal;
+    margin: 0; }
 
 .line {
   border-bottom: 1px solid #E0E0E0;
