@@ -29,17 +29,18 @@
 						<div class="card-container">
 								<ul class="disease-list">
 									{{#disease}}
-										<li>
-											<div class="card-item">
-												<a href="#">{{name}}</a>
-												<p>{{description}}</p>
-											</div>
-										</li>
+										{{#carrier}}
+											<li>
+												<div class="card-item">
+													<a href="#">{{name}}</a>
+													<p>{{description}}</p>
+												</div>
+											</li>
+										{{/carrier}}
+
 									{{/disease}}
 								</ul>
 						</div>
-
-						<p>You are unlikely to be a carrier for the <a href="#">197 other diseases tested</a>.</p>
 
 					{{/patient}}
 				</script>
@@ -55,6 +56,8 @@
 
 				});
 				</script>
+
+				<p>You are unlikely to be a carrier for any of the others in the <a href="#">200 disease panel</a>.</p>
 
 				<div class="line"></div>
 
