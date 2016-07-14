@@ -1,3 +1,6 @@
+$primary-blue: #02A8A8;
+$bg-gray: #E0E0E0;
+
 body {
   font-family: 'Hind', sans-serif;
   font-weight: 300;
@@ -10,7 +13,7 @@ body {
   width: 768px;
   margin-left: calc(50% - 424px);
   background-color: white;
-  padding: 30px 40px;
+  padding: 90px 40px;
   .content-container {
     width: 600px;
     margin-left: calc(50% - 300px);
@@ -44,15 +47,51 @@ p {
 }
 
 a {
-  color: #0066CC;
+  color: $primary-blue;
   text-decoration: none;
 }
+
+
+/* contact info */
+
+.top-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height:60px;
+  width: 100%;
+  background-color: $bg-gray;
+  .fix-contact & {
+    background-color: $primary-blue;
+  }
+}
+
+.contact-container {
+  background-color: yellow;
+  height: 200px;
+  position: relative;
+}
+
+.contact {
+  position: absolute;
+  top: 150px;
+  left: 0px;
+  .fix-contact & {
+    position: fixed;
+    top:10px;
+  }
+}
+
+
+
+
+
 
 
 /* Graphic Elements*/
 
 .card-container {
-  border: 1px solid #E0E0E0;
+  border: 1px solid $bg-gray;
   border-radius: 5px;
   width: 600px;
   margin-left: calc(50% - 300px);
@@ -63,7 +102,7 @@ a {
     padding-left: 0;
     li {
       div {
-        border-bottom: 1px solid #E0E0E0;
+        border-bottom: 1px solid $bg-gray;
         padding-top: 15px;
         padding-bottom: 15px;
         p, a {
@@ -103,8 +142,9 @@ a {
   }
   #divider {
     display: inline-block;
-    height:400px;
-    border-left: 1px solid #E0E0E0;
+    height:442px;
+    border-left: 1px solid $bg-gray;
+    position: absolute;
 
   }
 
@@ -119,7 +159,7 @@ a {
   height:55px;
   width:250px;
   // margin-left: calc(50% - 125px);
-  background-color: #0066CC;
+  background-color: $primary-blue;
   p {
     text-align: center;
     color:white;
@@ -129,7 +169,7 @@ a {
 }
 
 .line {
-  border-bottom: 1px solid #E0E0E0;
+  border-bottom: 1px solid $bg-gray;
   width: 100%;
   height: 15px;
 }
