@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
   $window.scroll(function(e) {
 
-    if ($window.scrollTop() >= $contactButtonContainer.offset().top - 10) {
+    if ($window.scrollTop() >= $contactButtonContainer.offset().top - 7) {
       $contactButton.addClass("fix-contact");
       $header.addClass('fix-contact');
     } else {
@@ -14,10 +14,6 @@ $( document ).ready(function() {
       $header.removeClass('fix-contact');
     }
 
-  });
-
-  $('.contact').click(function(){
-    console.log("clicked!");
   });
 
 });

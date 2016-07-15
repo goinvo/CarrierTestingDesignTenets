@@ -15,7 +15,7 @@ body {
   width: 768px;
   margin-left: calc(50% - 424px);
   background-color: white;
-  padding: 90px 40px; }
+  padding: 30px 40px; }
   .container .content-container {
     width: 600px;
     margin-left: calc(50% - 300px); }
@@ -51,22 +51,24 @@ a {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 75px;
+  height: 55px;
   width: 100%;
   transition: background-color .2s; }
   .header.fix-contact {
-    background-color: #E0E0E0; }
+    background-color: #5ACCCC; }
 
 .contact-button-container {
   height: 55px;
   margin-bottom: 20px; }
 
 .contact {
-  margin: 0 auto; }
+  transition: background-color .2s; }
   .contact.fix-contact {
     position: fixed;
-    top: 10px;
-    left: calc(50% - (250px / 2)); }
+    top: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 43px; }
 
 /* Graphic Elements*/
 .card-container {
@@ -109,8 +111,7 @@ a {
   .card-container #divider {
     display: inline-block;
     height: 442px;
-    border-left: 1px solid #E0E0E0;
-    position: absolute; }
+    border-left: 1px solid #E0E0E0; }
 
 .bullet-list {
   padding-left: 18px; }
@@ -118,12 +119,12 @@ a {
 .button {
   border-radius: 5px;
   width: 250px;
-  height: 55px;
+  height: 45px;
   background-color: #02A8A8; }
   .button p {
     text-align: center;
     color: white;
-    padding-top: 15px;
+    padding-top: 10px;
     font-style: normal;
     margin: 0; }
 

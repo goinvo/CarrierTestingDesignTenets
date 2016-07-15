@@ -1,7 +1,8 @@
 $primary-blue: #02A8A8;
+$secondary-blue: #5ACCCC;
 $bg-gray: #E0E0E0;
 $button-width: 250px;
-$button-height: 55px;
+$button-height: 45px;
 
 html {
   height: 100%;
@@ -21,7 +22,7 @@ body {
   width: 768px;
   margin-left: calc(50% - 424px);
   background-color: white;
-  padding: 90px 40px;
+  padding: 30px 40px;
   .content-container {
     width: 600px;
     margin-left: calc(50% - 300px);
@@ -66,11 +67,11 @@ a {
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 75px;
+  height: 55px;
   width: 100%;
   transition: background-color .2s;
   &.fix-contact {
-    background-color: $bg-gray;
+    background-color: $secondary-blue;
   }
 }
 
@@ -78,19 +79,18 @@ a {
   height: 55px;
   margin-bottom: 20px;
 }
+
 .contact {
-  margin: 0 auto;
+  transition: background-color .2s;
   &.fix-contact {
     position: fixed;
-    top: 10px;
-    left: calc(50% - (#{$button-width} / 2));
+    top: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 43px;
+    // left: calc(50% - (#{$button-width} / 2));
   }
 }
-
-
-
-
-
 
 
 /* Graphic Elements*/
@@ -149,8 +149,6 @@ a {
     display: inline-block;
     height:442px;
     border-left: 1px solid $bg-gray;
-    position: absolute;
-
   }
 
 }
@@ -163,12 +161,11 @@ a {
   border-radius: 5px;
   width: $button-width;
   height: $button-height;
-  // margin-left: calc(50% - 125px);
   background-color: $primary-blue;
   p {
     text-align: center;
     color:white;
-    padding-top:15px;
+    padding-top:10px;
     font-style: normal;
     margin: 0;
   }
