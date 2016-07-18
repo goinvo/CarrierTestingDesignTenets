@@ -31,31 +31,45 @@
 
 <!-- Template for carrier -->
 
-				<script id="patient_template" type="text/template">
+				<script id="carrier-template" type="text/template">
 					{{#patient}}
 
-						<h1>{{name}}, you are a carrier for <span class="disease-count"></span> diseases</h1>
+						{{#isCarrier}}
+							<h1>{{name}}, you are a carrier for <span class="disease-count"></span> diseases</h1>
+							<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
+							<br>Each child's risk of inheriting a disease is undetermined until we test your partner.</h2>
+						{{/isCarrier}}
 
-						<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
-						<br>Each child's risk of inheriting a disease is undetermined until we test your partner.</h2>
+						{{^isCarrier}}
+							<h1>{{name}}, you are unlikely to be a carrier</h1>
+							<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
+						{{/isCarrier}}
+
 
 						<div class="card-container">
 								<ul class="disease-list" id="disease-list">
-									{{#disease}}
-										{{#carrier}}
-											<li>
-												<div class="card-item">
-													<a href="#">{{name}}</a>
-													<p>{{description}}</p>
+									{{#diseases}}
+										<li>
+											<div class="card-item {{^carrier}}unlikely-card-item{{/carrier}}">
+												<a href="#">{{name}}</a>
+												<p>{{description}}</p>
+											</div>
+											{{^carrier}}
+												<div class="unlikely-carrier">
+													<p>Unlikely Carrier</p>
 												</div>
-											</li>
-										{{/carrier}}
-									{{/disease}}
+											{{/carrier}}
+										</li>
+									{{/diseases}}
 								</ul>
 						</div>
 
-						<p>You are unlikely to be a carrier for any of the others in the <a href="#">200 disease panel</a>.</p>
-
+						{{#isCarrier}}
+							<p>You are unlikely to be a carrier for any of the others in the <a href="#">200 disease panel</a>.</p>
+						{{/isCarrier}}
+						{{^isCarrier}}
+							<p>View full list of the <a href="#">200 diseases tested</a>.</p>
+						{{/isCarrier}}
 					{{/patient}}
 				</script>
 
@@ -118,7 +132,7 @@
 
 <!-- Template for non-carrier -->
 
-				<!-- <script id="patient_template" type="text/template">
+				<!-- <script id="noncarrier-template" type="text/template">
 					{{#patient}}
 
 						<h1>{{name}}, you are unlikely to be a carrier</h1>

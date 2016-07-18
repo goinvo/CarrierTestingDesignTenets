@@ -81,6 +81,7 @@ a {
     margin: 0;
     padding-left: 0; }
     .card-container .disease-list li {
+      position: relative;
       border-bottom: 1px solid #E0E0E0; }
       .card-container .disease-list li .card-item {
         padding-top: 15px;

@@ -106,6 +106,7 @@ a {
     margin: 0;
     padding-left: 0;
     li {
+      position: relative;
       border-bottom: 1px solid $bg-gray;
       .card-item {
         padding-top: 15px;

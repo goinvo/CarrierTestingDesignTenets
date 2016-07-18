@@ -19,17 +19,29 @@ $( document ).ready(function() {
   $(function() {
 
     $.getJSON('json/data.json', function (data) {
-      var template = $('#patient_template').html ();
+      var patient = data.patient[0];
+      var patientDiseases = patient.diseases;
+
+      function filterDiseases(diseases, isCarrier) {
+        var filteredDiseases = [];
+        for (i = 0; i < diseases.length; i++) {
+          if (diseases[i].carrier === isCarrier) {
+            filteredDiseases.push(diseases[i]);
+          }
+        }
+        return filteredDiseases;
+      }
+
+      if (patient.isCarrier) {
+        patient.diseases = filterDiseases(patientDiseases, true);
+      } else {
+        patient.diseases = filterDiseases(patientDiseases, false);
+      }
+
+      var template = $('#carrier-template').html();
       var html = Mustache.to_html(template, data);
       $('#results').html(html);
-      var $carrierCounter = 0;
-      for (i = 0; i < data.patient.disease.length; i++) {
-        var $carrier = data.patient.disease.carrier;
-        if ($carrier == true) {
-          $carrierCounter++;
-        }
-      }
-      $('.disease-count').html($carrierCounter);
+      $('.disease-count').html(patient.diseases.length);
 
     });
 
