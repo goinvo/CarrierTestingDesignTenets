@@ -5,12 +5,12 @@
         "isCarrier": true,
         "diseases":[
           {
-            "carrier": true,
+            "carrier": false,
             "name": "Cystic Fibrosis",
             "description": "Characterized by impaired lung and digestive function due to thick, sticky mucus. The disease typically worsens over time and currently has no cure."
           },
           {
-            "carrier": false,
+            "carrier": true,
             "name": "Usher Syndrome Type 1 (USH1)",
             "description": "Complete hearing loss from birth, problems with balance and progressive loss of sight starting before puberty."
           },
