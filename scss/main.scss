@@ -106,8 +106,8 @@ a {
     margin: 0;
     padding-left: 0;
     li {
-      div {
-        border-bottom: 1px solid $bg-gray;
+      border-bottom: 1px solid $bg-gray;
+      .card-item {
         padding-top: 15px;
         padding-bottom: 15px;
         p, a {
@@ -117,10 +117,28 @@ a {
           margin-top:0;
         }
       }
-      &:last-child div {
+      .unlikely-card-item {
+        display: inline-block;
+        width: 460px;
+      }
+      .unlikely-carrier {
+        display: inline-block;
+        background: $bg-gray;
+        border-radius: 20px;
+        width: 120px;
+        height: 30px;
+        margin-top:20px;
+        vertical-align: top;
+        p {
+          margin-top: 5px;
+          text-align: center;
+        }
+      }
+      &:last-child {
         border-bottom:0;
       }
     }
+
   }
 
   .risk-container {

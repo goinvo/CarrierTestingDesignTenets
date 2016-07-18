@@ -8,7 +8,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,600,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="vendor/jquery.js"></script>
-		<script src="js/main.js"></script>
+
 		<script type="text/javascript" src="node_modules/mustache/mustache.js" ></script>
 		<script type="text/javascript" src="json/data.json" ></script>
 	</head>
@@ -21,20 +21,26 @@
 
 			<div class="content-container">
 
+
+
+<!-- Output of the template -->
+
 				<div id="results"></div>
+
+
+
+<!-- Template for carrier -->
 
 				<script id="patient_template" type="text/template">
 					{{#patient}}
 
-						<h1>{{name}}, you are {{carrierStatus}} for {{diseaseCount}}</h1>
+						<h1>{{name}}, you are a carrier for <span class="disease-count"></span> diseases</h1>
 
 						<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
 						<br>Each child's risk of inheriting a disease is undetermined until we test your partner.</h2>
 
-
-
 						<div class="card-container">
-								<ul class="disease-list">
+								<ul class="disease-list" id="disease-list">
 									{{#disease}}
 										{{#carrier}}
 											<li>
@@ -48,22 +54,14 @@
 								</ul>
 						</div>
 
+						<p>You are unlikely to be a carrier for any of the others in the <a href="#">200 disease panel</a>.</p>
+
 					{{/patient}}
 				</script>
 
-				<script type="text/javascript">
-				$(function() {
+				<div class="line"></div>
 
-					$.getJSON('json/data.json', function (data) {
-						var template = $('#patient_template').html ();
-						var html = Mustache.to_html(template, data);
-						$('#results').html(html);
-					});
-
-				});
-				</script>
-
-				<p>You are unlikely to be a carrier for any of the others in the <a href="#">200 disease panel</a>.</p>
+				<h2>A counselor is always available to review your results</h2>
 
 				<div class="contact-button-container" id="contact-button-container">
 					<div class="contact button" id="contact-button">
@@ -116,6 +114,56 @@
 
 				<div class="line"></div>
 
+
+
+<!-- Template for non-carrier -->
+
+				<!-- <script id="patient_template" type="text/template">
+					{{#patient}}
+
+						<h1>{{name}}, you are unlikely to be a carrier</h1>
+
+						<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
+
+						<div class="card-container">
+								<ul class="disease-list" id="disease-list">
+									{{#disease}}
+										{{^carrier}}
+											<li>
+												<div class="card-item unlikely-card-item">
+													<a href="#">{{name}}</a>
+													<p>{{description}}</p>
+												</div>
+												<div class="unlikely-carrier">
+													<p>Unlikely Carrier</p>
+												</div>
+											</li>
+										{{/carrier}}
+									{{/disease}}
+								</ul>
+						</div>
+
+						<p>View full list of the <a href="#">200 diseases tested</a>.</p>
+
+					{{/patient}}
+
+
+				</script>
+
+				<div class="line"></div>
+
+				<h2>A counselor is always available to review your results</h2>
+
+				<div class="contact-button-container" id="contact-button-container">
+					<div class="contact button" id="contact-button">
+						<p>Contact Care Team</p>
+					</div>
+				</div> -->
+
+
+
+<!-- Generic content regardless of carrier status -->
+
 				<h2>Send your report to your family doctor</h2>
 				<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Some siblings appreciate knowing this information, but some do not.
 				<a href="#">Consider these reasons before telling family.</a></p>
@@ -136,7 +184,14 @@
 				<h2>Test Details</h2>
 				<p>[Patient, sample, and laboratory information go here.]</p>
 
+				<div class="line"></div>
+
+				<p>This is an open source template for carrier test reporting licensed under #####</p>
+
 			</div>
     </div>
+
+		<script src="js/main.js"></script>
+
   </body>
 </html>

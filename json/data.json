@@ -2,8 +2,6 @@
   "patient":[
       {
         "name": "Beth",
-        "carrierStatus": "a carrier",
-        "diseaseCount": "3 diseases",
         "disease":[
           {
             "carrier": true,

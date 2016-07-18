@@ -16,4 +16,27 @@ $( document ).ready(function() {
 
   });
 
+  $(function() {
+
+    $.getJSON('json/data.json', function (data) {
+      var template = $('#patient_template').html ();
+      var html = Mustache.to_html(template, data);
+      $('#results').html(html);
+      var $carrierCounter = 0;
+      for (i = 0; i < data.patient.disease.length; i++) {
+        var $carrier = data.patient.disease.carrier;
+        if ($carrier == true) {
+          $carrierCounter++;
+        }
+      }
+      $('.disease-count').html($carrierCounter);
+
+    });
+
+  });
+
+  var $element = $("#disease-list");
+  var numberOfChildren = $element.children().length;
+  console.log(numberOfChildren);
+
 });

@@ -80,17 +80,32 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .card-container .disease-list li div {
-      border-bottom: 1px solid #E0E0E0;
-      padding-top: 15px;
-      padding-bottom: 15px; }
-      .card-container .disease-list li div p, .card-container .disease-list li div a {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 0;
-        margin-top: 0; }
-    .card-container .disease-list li:last-child div {
-      border-bottom: 0; }
+    .card-container .disease-list li {
+      border-bottom: 1px solid #E0E0E0; }
+      .card-container .disease-list li .card-item {
+        padding-top: 15px;
+        padding-bottom: 15px; }
+        .card-container .disease-list li .card-item p, .card-container .disease-list li .card-item a {
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 0;
+          margin-top: 0; }
+      .card-container .disease-list li .unlikely-card-item {
+        display: inline-block;
+        width: 460px; }
+      .card-container .disease-list li .unlikely-carrier {
+        display: inline-block;
+        background: #E0E0E0;
+        border-radius: 20px;
+        width: 120px;
+        height: 30px;
+        margin-top: 20px;
+        vertical-align: top; }
+        .card-container .disease-list li .unlikely-carrier p {
+          margin-top: 5px;
+          text-align: center; }
+      .card-container .disease-list li:last-child {
+        border-bottom: 0; }
   .card-container .risk-container {
     display: inline-block;
     width: 255px;
