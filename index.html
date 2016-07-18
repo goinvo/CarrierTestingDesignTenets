@@ -130,13 +130,23 @@
 
 				<div class="line"></div>
 
-				<h2>Send your report to your family doctor</h2>
-				<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Some siblings appreciate knowing this information, but some do not.
-				<a href="#">Consider these reasons before telling family.</a></p>
+				<h2>Send your report to your family or doctor</h2>
 
-				<a href="#"><div class="button">
-					<p>Choose who can view your report</p>
-				</div></a>
+				{{#isCarrier}}
+					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
+					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
+					<br>
+				{{/isCarrier}}
+
+				{{^isCarrier}}
+					<p>Share your good news with the important people in your life. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.</p>
+				{{/isCarrier}}
+
+				<a href="#">
+					<div class="button">
+						<p>Choose who can view your report</p>
+					</div>
+				</a>
 				<br>
 
 			{{/patient}}
