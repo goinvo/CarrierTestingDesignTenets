@@ -72,6 +72,11 @@ a {
     height: 43px; }
 
 /* Graphic Elements*/
+.disease-container {
+  border: 1px solid black;
+  height: 400px;
+  overflow: auto; }
+
 .card-container {
   border: 1px solid #E0E0E0;
   border-radius: 5px;

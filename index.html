@@ -8,7 +8,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,600,700" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<script src="vendor/jquery.js"></script>
-
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<meta charset=utf-8 />
 		<script type="text/javascript" src="node_modules/mustache/mustache.js" ></script>
 		<script type="text/javascript" src="json/data.json" ></script>
 	</head>
@@ -43,7 +44,7 @@
 						{{/isCarrier}}
 
 
-						<div class="card-container">
+						<div class="card-container {{^isCarrier}}disease-container{{/isCarrier}}">
 								<ul class="disease-list" id="disease-list">
 									{{#diseases}}
 										<li>

@@ -95,7 +95,11 @@ a {
 
 
 /* Graphic Elements*/
-
+.disease-container {
+  border: 1px solid black;
+  height: 400px;
+  overflow: auto;
+}
 .card-container {
   border: 1px solid $bg-gray;
   border-radius: 5px;
