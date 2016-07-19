@@ -48,15 +48,22 @@
 								<ul class="disease-list" id="disease-list">
 									{{#diseases}}
 										<li>
-											<div class="card-item {{^carrier}}unlikely-card-item{{/carrier}}">
+											<div class="card-item {{#carrier}}item-carrier{{/carrier}}">
 												<a href="#">{{name}}</a>
 												<p>{{description}}</p>
 											</div>
-											{{^carrier}}
-												<div class="unlikely-carrier">
-													<p>Unlikely Carrier</p>
-												</div>
-											{{/carrier}}
+												{{#carrier}}
+													<div class="status-tag tag-carrier">
+														<p>Carrier</p>
+													</div>
+												{{/carrier}}
+												{{^carrier}}
+													<div class="status-tag tag-noncarrier">
+														<p>Unlikely Carrier</p>
+													</div>
+												{{/carrier}}
+
+
 										</li>
 									{{/diseases}}
 								</ul>

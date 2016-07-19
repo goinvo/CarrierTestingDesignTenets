@@ -91,24 +91,28 @@ a {
       border-bottom: 1px solid #E0E0E0; }
       .card-container .disease-list li .card-item {
         padding-top: 15px;
-        padding-bottom: 15px; }
+        padding-bottom: 15px;
+        display: inline-block;
+        width: 450px; }
+        .card-container .disease-list li .card-item.item-carrier {
+          width: 510px; }
         .card-container .disease-list li .card-item p, .card-container .disease-list li .card-item a {
           margin-left: 20px;
           margin-right: 20px;
           margin-bottom: 0;
           margin-top: 0; }
-      .card-container .disease-list li .unlikely-card-item {
-        display: inline-block;
-        width: 460px; }
-      .card-container .disease-list li .unlikely-carrier {
+      .card-container .disease-list li .status-tag {
         display: inline-block;
         background: #E0E0E0;
         border-radius: 20px;
-        width: 120px;
         height: 30px;
         margin-top: 20px;
         vertical-align: top; }
-        .card-container .disease-list li .unlikely-carrier p {
+        .card-container .disease-list li .status-tag.tag-carrier {
+          width: 70px; }
+        .card-container .disease-list li .status-tag.tag-noncarrier {
+          width: 120px; }
+        .card-container .disease-list li .status-tag p {
           margin-top: 5px;
           text-align: center; }
       .card-container .disease-list li:last-child {

@@ -116,6 +116,11 @@ a {
       .card-item {
         padding-top: 15px;
         padding-bottom: 15px;
+        display: inline-block;
+        width: 450px;
+        &.item-carrier {
+          width:510px;
+        }
         p, a {
           margin-left: 20px;
           margin-right: 20px;
@@ -123,18 +128,19 @@ a {
           margin-top:0;
         }
       }
-      .unlikely-card-item {
-        display: inline-block;
-        width: 460px;
-      }
-      .unlikely-carrier {
+      .status-tag {
         display: inline-block;
         background: $bg-gray;
         border-radius: 20px;
-        width: 120px;
         height: 30px;
         margin-top:20px;
         vertical-align: top;
+        &.tag-carrier {
+          width: 70px;
+        }
+        &.tag-noncarrier {
+          width: 120px;
+        }
         p {
           margin-top: 5px;
           text-align: center;
