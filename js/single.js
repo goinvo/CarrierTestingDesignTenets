@@ -1,10 +1,27 @@
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 $( document ).ready(function() {
 
+  var patientID = Number(getParameterByName('patient'));
 
   $(function() {
 
+    if (patientID === NaN || patientID === undefined) {
+      console.log('oops, no patient ID set');
+      return;
+    }
+
     $.getJSON('../json/data.json', function (data) {
-      var patient = data.patient[0];
+      var patient = data.patient[patientID];
+      console.log(patient);
       var patientDiseases = patient.diseases;
 
       function filterDiseases(diseases, isCarrier) {
