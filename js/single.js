@@ -30,6 +30,7 @@ $( document ).ready(function() {
 
       var $window = $(window),
           $header = $('.header'),
+          $backButton = $('.back-button'),
           $contactButton = $('#contact-button'),
           $contactButtonContainer = $('#contact-button-container');
 
@@ -38,9 +39,11 @@ $( document ).ready(function() {
         if ($window.scrollTop() >= $contactButtonContainer.offset().top - 7) {
           $contactButton.addClass("fix-contact");
           $header.addClass('fix-contact');
+          $backButton.addClass('fix-contact');
         } else {
           $contactButton.removeClass("fix-contact");
           $header.removeClass('fix-contact');
+          $backButton.removeClass('fix-contact');
         }
 
       });
