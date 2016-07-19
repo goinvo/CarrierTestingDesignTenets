@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
   $(function() {
 
-    $.getJSON('json/data.json', function (data) {
+    $.getJSON('../json/data.json', function (data) {
       var patient = data.patient[0];
       var patientDiseases = patient.diseases;
 
