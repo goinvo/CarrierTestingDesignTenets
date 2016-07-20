@@ -21,7 +21,6 @@ $( document ).ready(function() {
 
     $.getJSON('../json/data.json', function (data) {
       var patient = data.patient[patientID];
-      console.log(patient);
       var patientDiseases = patient.diseases;
 
       function filterDiseases(diseases, isCarrier) {
@@ -41,7 +40,7 @@ $( document ).ready(function() {
       }
 
       var template = $('#carrier-template').html();
-      var html = Mustache.to_html(template, data);
+      var html = Mustache.to_html(template, patient);
       $('#results').html(html);
       $('.disease-count').html(patient.diseases.length);
 

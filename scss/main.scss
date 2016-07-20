@@ -47,9 +47,29 @@ body {
   height: 55px;
   width: 100%;
   transition: background-color .2s;
+  opacity: 0;
   &.fix-header {
     background-color: $secondary-blue;
     box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    opacity: 1;
+  }
+  .header-title {
+    display: inline-block;
+    padding-left: 50px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .header-links {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    p {
+      display: inline-block;
+      padding: 0 25px;
+      color: white;
+    }
   }
 }
 .title-container {
@@ -59,9 +79,13 @@ body {
     text-align: left;
     width: 70%;
     line-height: 97%;
+    color: white;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   }
   .home-subtitle {
     width: 70%;
+    color: white;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -114,6 +138,14 @@ body {
       margin-bottom: 10px;
       &.inactive {
         opacity: 0.55;
+        &:hover {
+          border: 1px solid $bg-gray;
+          background-color: white;
+        }
+      }
+      &:hover {
+        border: 1px solid $primary-blue;
+        background-color: #F0FFFF;
       }
     }
     .example-item {
