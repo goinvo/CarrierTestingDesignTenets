@@ -29,10 +29,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: left;
-  font-weight: 600;
+  font-weight: 400;
+  text-transform: uppercase;
   margin-top: 28px;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: 600;
 }
 .subheader {
   text-align: center;
@@ -132,7 +138,7 @@ a {
 
 .overview {
   width: 100%;
-  padding: 30px 0 30px 0;
+  padding: 56px 0 30px 0;
 }
 
 .validation-container {
@@ -141,28 +147,23 @@ a {
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
-}
-
-.validation {
-  width: 80%;
-  margin: 0 auto;
-  max-width: 900px;
-  .validation-item {
-    width: 200px;
-    display: inline-block;
-    *display:inline;
-    zoom: 1;
-    height: 55px;
-    vertical-align: top;
-    .placeholder {
-      background-color: $bg-gray;
-      height: 200px;
+  .validation {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 900px;
+    .validation-item {
       width: 200px;
-    }
-    p {
-      text-align: center;
-      padding: 0 10px;
-      font-weight: 600;
+      display: inline-block;
+      *display:inline;
+      zoom: 1;
+      height: 55px;
+      vertical-align: top;
+      p {
+        text-align: center;
+        padding: 0 10px;
+        font-weight: 600;
+        color: $nonblack;
+      }
     }
   }
 }
@@ -250,14 +251,14 @@ a {
   }
 }
 
-.improve-button {
+.button {
   display: inline-block;
   width: 46%;
   height: 55px;
   border: 1px solid $primary-blue;
   border-radius: 5px;
   text-align: center;
-  &:last-of-type {
+  &.second-button {
     margin-left: 5%;
   }
   &:hover {
@@ -266,6 +267,40 @@ a {
   p {
     margin-top: 15px;
     font-weight: 600;
+  }
+}
+
+.sample-container {
+  width:100%;
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+  .sample {
+
+    max-width: 900px;
+    .sample-item {
+      display: inline-block;
+      *display:inline;
+      zoom: 1;
+      vertical-align: top;
+      .placeholder {
+        background-color: $bg-gray;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+      }
+      .sample-number {
+        text-align: center;
+        font-size: 3em;
+        font-weight: 600;
+        margin: -40px 0 0 0;
+      }
+      .sample-role {
+        text-align: center;
+        margin: -20px 0 0 0;
+      }
+    }
   }
 }
 
