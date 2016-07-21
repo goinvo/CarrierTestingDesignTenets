@@ -58,7 +58,7 @@ a {
   .home-content-container {
     width: 80%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
   }
 }
 
@@ -122,6 +122,7 @@ a {
     width: 70%;
     color: white;
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.15);
+    margin-top: 0;
   }
 }
 
@@ -136,28 +137,36 @@ a {
 
 .validation-container {
   width:100%;
-  padding-bottom: 40px;
+  background-color: #F8F8F8;
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
 }
 
 .validation {
-  width: 200px;
-  display: inline-block;
-  *display:inline;
-  zoom: 1;
-  height: 250px;
-  vertical-align: top;
-  .placeholder {
-    background-color: $bg-gray;
-    height: 200px;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+  .validation-item {
     width: 200px;
-  }
-  p {
-    text-align: center;
+    display: inline-block;
+    *display:inline;
+    zoom: 1;
+    height: 55px;
+    vertical-align: top;
+    .placeholder {
+      background-color: $bg-gray;
+      height: 200px;
+      width: 200px;
+    }
+    p {
+      text-align: center;
+      padding: 0 10px;
+      font-weight: 600;
+    }
   }
 }
+
 
 .stretch {
   width: 100%;
@@ -241,12 +250,56 @@ a {
   }
 }
 
+.improve-button {
+  display: inline-block;
+  width: 46%;
+  height: 55px;
+  border: 1px solid $primary-blue;
+  border-radius: 5px;
+  text-align: center;
+  &:last-of-type {
+    margin-left: 5%;
+  }
+  &:hover {
+    background-color: #F0FFFF;
+  }
+  p {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+}
+
 .limitations {
   ul {
     padding-left: 20px;
   }
 }
 
-.license {
-  padding-bottom: 40px;
+.about {
+  .invo-img {
+    display: inline-block;
+    width: 46%;
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    display: inline-block;
+    width: 46%;
+    margin: 0 0 0 5%;
+    vertical-align: top;
+  }
+}
+
+.license-container {
+  margin-top: 20px;background-color: #F8F8F8;
+  width: 100%;
+  .license {
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    max-width: 900px;
+  }
+
 }
