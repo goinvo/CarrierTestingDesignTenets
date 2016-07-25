@@ -38,13 +38,13 @@
 				<script id="carrier-template" type="text/template">
 
 						{{#isCarrier}}
-							<h1>{{name}}, you are a carrier for <br><span class="disease-count"></span> disease(s)</h1>
+							<h1>{{name}}, you are a carrier for <span class="disease-count"></span> disease(s)</h1>
 							<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
 							<br>Each child's risk of inheriting a disease is undetermined until we test your partner.</h2>
 						{{/isCarrier}}
 
 						{{^isCarrier}}
-							<h1>{{name}}, you are unlikely to <br>be a carrier</h1>
+							<h1>{{name}}, you are unlikely to be a carrier</h1>
 							<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
 						{{/isCarrier}}
 
@@ -52,7 +52,9 @@
 						<div class="card-container {{^isCarrier}}disease-container{{/isCarrier}}">
 								<ul class="disease-list" id="disease-list">
 									{{#diseases}}
-										<li>
+
+                    <li>
+
 											<div class="card-item {{#carrier}}item-carrier{{/carrier}}">
 												<a href="#">{{name}}</a>
 												<p>{{description}}</p>
@@ -68,8 +70,8 @@
 													</div>
 												{{/carrier}}
 
-
 										</li>
+
 									{{/diseases}}
 								</ul>
 						</div>

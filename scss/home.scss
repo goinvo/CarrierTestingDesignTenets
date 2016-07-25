@@ -5,6 +5,9 @@ $nonblack: #4A4A4A;
 $button-width: 250px;
 $button-height: 45px;
 
+$tablet: 760px;
+$mobile: 480px;
+
 html {
   height: 100%;
 }
@@ -349,7 +352,18 @@ a {
 
 /* Smartphones (portrait) ----------- */
 
-@media only screen and (max-width : 480px) {
+@media only screen and (max-width : $tablet) {
+  .validation-container {
+    .validation {
+      .validation-item {
+        width: 120px;
+        height: 85px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : $mobile) {
   .header-links {
     right: 0;
     .hide {
@@ -382,12 +396,12 @@ a {
     }
   }
 
-
-  .validation-container{
+  .validation-container {
     .validation {
       padding-top: 20px;
       .validation-item {
         width: 100%;
+        height: 55px;
       }
     }
   }

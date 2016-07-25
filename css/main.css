@@ -6,16 +6,14 @@ body {
   font-weight: 300;
   color: #4A4A4A;
   margin: 0;
-  background-color: #F8F8F8;
+  background-color: white;
   height: 100%;
   overflow-y: auto; }
 
 .container {
-  position: relative;
-  width: 768px;
-  margin-left: calc(50% - 424px);
+  margin: 0 auto;
   background-color: white;
-  padding: 30px 40px; }
+  padding: 30px 0; }
   .container .back-button {
     width: 50px;
     height: 23px;
@@ -40,8 +38,9 @@ body {
         .container .back-button.fix-contact p:hover {
           color: #5ACCCC; }
   .container .content-container {
-    width: 600px;
-    margin-left: calc(50% - 300px); }
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto; }
 
 /* Font treatments (keep < 6)*/
 h1 {
@@ -49,7 +48,7 @@ h1 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 20px; }
 
 h2 {
   font-size: 1em;
@@ -103,8 +102,7 @@ a {
 .card-container {
   border: 1px solid #E0E0E0;
   border-radius: 5px;
-  width: 600px;
-  margin-left: calc(50% - 300px); }
+  width: 100%; }
   .card-container .disease-list {
     list-style: none;
     margin: 0;
@@ -116,9 +114,9 @@ a {
         padding-top: 15px;
         padding-bottom: 15px;
         display: inline-block;
-        width: 450px; }
+        width: 75%; }
         .card-container .disease-list li .card-item.item-carrier {
-          width: 510px; }
+          width: 80%; }
         .card-container .disease-list li .card-item p, .card-container .disease-list li .card-item a {
           margin-left: 20px;
           margin-right: 20px;
@@ -126,6 +124,8 @@ a {
           margin-top: 0; }
       .card-container .disease-list li .status-tag {
         display: inline-block;
+        position: absolute;
+        right: 20px;
         background: #E0E0E0;
         border-radius: 20px;
         height: 30px;
@@ -142,7 +142,7 @@ a {
         border-bottom: 0; }
   .card-container .risk-container {
     display: inline-block;
-    width: 255px;
+    width: calc(48% - 40px);
     padding-left: 20px;
     padding-right: 20px;
     vertical-align: top; }
@@ -181,3 +181,7 @@ a {
   border-bottom: 1px solid #E0E0E0;
   width: 100%;
   height: 15px; }
+
+@media only screen and (max-width: 480px) {
+  .container .content-container {
+    width: 90%; } }

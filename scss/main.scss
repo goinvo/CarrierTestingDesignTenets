@@ -5,6 +5,9 @@ $nonblack: #4A4A4A;
 $button-width: 250px;
 $button-height: 45px;
 
+$tablet: 760px;
+$mobile: 480px;
+
 html {
   height: 100%;
 }
@@ -13,7 +16,7 @@ body {
   font-weight: 300;
   color: $nonblack;
   margin: 0;
-  background-color: #F8F8F8;
+  background-color: white;
   height: 100%;
   overflow-y: auto;
 }
@@ -22,11 +25,10 @@ body {
 // Individual Report
 
 .container {
-  position: relative;
-  width: 768px;
-  margin-left: calc(50% - 424px);
+
+  margin: 0 auto;
   background-color: white;
-  padding: 30px 40px;
+  padding: 30px 0;
   .back-button {
     width: 50px;
     height: 23px;
@@ -59,8 +61,9 @@ body {
     }
   }
   .content-container {
-    width: 600px;
-    margin-left: calc(50% - 300px);
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
   }
 }
 
@@ -71,7 +74,7 @@ h1 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 h2 {
@@ -138,8 +141,7 @@ a {
 .card-container {
   border: 1px solid $bg-gray;
   border-radius: 5px;
-  width: 600px;
-  margin-left: calc(50% - 300px);
+  width: 100%;
 
   .disease-list {
     list-style: none;
@@ -152,9 +154,9 @@ a {
         padding-top: 15px;
         padding-bottom: 15px;
         display: inline-block;
-        width: 450px;
+        width: 75%;
         &.item-carrier {
-          width:510px;
+          width: 80%;
         }
         p, a {
           margin-left: 20px;
@@ -165,6 +167,8 @@ a {
       }
       .status-tag {
         display: inline-block;
+        position: absolute;
+        right: 20px;
         background: $bg-gray;
         border-radius: 20px;
         height: 30px;
@@ -190,7 +194,7 @@ a {
 
   .risk-container {
     display: inline-block;
-    width: 255px;
+    width: calc(48% - 40px);
     padding-left: 20px;
     padding-right: 20px;
     vertical-align: top;
@@ -240,4 +244,16 @@ a {
   border-bottom: 1px solid $bg-gray;
   width: 100%;
   height: 15px;
+}
+
+
+
+@media only screen and (max-width : $mobile) {
+
+  .container {
+    .content-container {
+      width: 90%;
+    }
+  }
+
 }
