@@ -103,64 +103,70 @@ a {
   border: 1px solid #E0E0E0;
   border-radius: 5px;
   width: 100%; }
-  .card-container .disease-list {
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .card-container .disease-list li {
-      position: relative;
-      border-bottom: 1px solid #E0E0E0; }
-      .card-container .disease-list li .card-item {
-        padding-top: 15px;
-        padding-bottom: 15px;
-        display: inline-block;
-        width: 75%; }
-        .card-container .disease-list li .card-item.item-carrier {
-          width: 80%; }
-        .card-container .disease-list li .card-item p, .card-container .disease-list li .card-item a {
-          margin-left: 20px;
-          margin-right: 20px;
-          margin-bottom: 0;
-          margin-top: 0; }
-      .card-container .disease-list li .status-tag {
-        display: inline-block;
-        position: absolute;
-        right: 20px;
-        background: #E0E0E0;
-        border-radius: 20px;
-        height: 30px;
-        margin-top: 20px;
-        vertical-align: top; }
-        .card-container .disease-list li .status-tag.tag-carrier {
-          width: 70px; }
-        .card-container .disease-list li .status-tag.tag-noncarrier {
-          width: 120px; }
-        .card-container .disease-list li .status-tag p {
-          margin-top: 5px;
-          text-align: center; }
-      .card-container .disease-list li:last-child {
-        border-bottom: 0; }
-  .card-container .risk-container {
-    display: inline-block;
-    width: calc(48% - 40px);
-    padding-left: 20px;
-    padding-right: 20px;
-    vertical-align: top; }
-    .card-container .risk-container img {
-      width: 180px;
-      height: auto;
-      margin-left: calc(50% - 90px); }
-    .card-container .risk-container h2 {
-      margin-bottom: 0;
-      margin-top: 13px; }
-    .card-container .risk-container p {
-      margin-top: 0; }
-      .card-container .risk-container p:first-of-type {
-        height: 78px; }
-  .card-container #divider {
-    display: inline-block;
-    height: 442px;
-    border-left: 1px solid #E0E0E0; }
+
+.disease-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  .disease-list li {
+    position: relative;
+    border-bottom: 1px solid #E0E0E0; }
+    .disease-list li .card-item {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: inline-block;
+      width: 75%; }
+      .disease-list li .card-item.item-carrier {
+        width: 80%; }
+      .disease-list li .card-item p, .disease-list li .card-item a {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        margin-top: 0; }
+    .disease-list li .status-tag {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      background: #E0E0E0;
+      border-radius: 20px;
+      height: 30px;
+      margin-top: 17px;
+      vertical-align: top; }
+      .disease-list li .status-tag.tag-carrier {
+        width: 70px; }
+      .disease-list li .status-tag.tag-noncarrier {
+        width: 120px; }
+      .disease-list li .status-tag p {
+        margin-top: 5px;
+        text-align: center; }
+    .disease-list li:last-child {
+      border-bottom: 0; }
+
+.risk-container td {
+  padding: 0 20px;
+  width: 49%;
+  vertical-align: top;
+  margin: 0 auto;
+  text-align: center; }
+  .risk-container td h2 {
+    margin-bottom: 0;
+    margin-top: 13px;
+    text-align: left; }
+  .risk-container td p {
+    margin-top: 0;
+    text-align: left; }
+  .risk-container td:nth-child(odd) {
+    border-right: 1px solid #E0E0E0; }
+  .risk-container td .graph {
+    width: 180px;
+    height: auto;
+    margin: auto; }
+
+@media only screen and (max-width: 560px) {
+  .risk-container td {
+    padding: 0 8px; }
+    .risk-container td .graph {
+      width: 100%; } }
 
 .bullet-list {
   padding-left: 18px; }
