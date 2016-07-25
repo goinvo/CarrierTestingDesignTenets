@@ -17,9 +17,10 @@ body {
   position: relative; }
   .container .back-button {
     width: 50px;
+    background-color: #E0E0E0;
     height: 23px;
     border: 1px solid #4A4A4A;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0;
     position: fixed;
     margin-top: -15px;
     z-index: 15; }
@@ -32,13 +33,11 @@ body {
       .container .back-button p:hover {
         color: white; }
     .container .back-button.fix-contact {
-      border: 1px solid white; }
-      .container .back-button.fix-contact:hover {
-        background-color: white; }
+      border: 0;
+      background: transparent; }
       .container .back-button.fix-contact p {
-        color: white; }
-        .container .back-button.fix-contact p:hover {
-          color: #5ACCCC; }
+        color: white;
+        font-weight: 600; }
   .container .content-container {
     position: relative;
     width: 80%;
@@ -116,7 +115,7 @@ a {
     position: fixed !important;
     top: 5px;
     margin-top: 0;
-    right: 5px;
+    right: -45px;
     background-color: transparent;
     border: 0;
     height: 43px;
@@ -237,3 +236,15 @@ a {
 @media only screen and (max-width: 480px) {
   .container .content-container {
     width: 90%; } }
+
+@media only screen and (max-width: 760px) {
+  .container .content-container .content {
+    padding: 10px 0 20px 0; }
+    .container .content-container .content .content-item {
+      width: 100%; }
+  .button {
+    position: static;
+    margin: 0 0 10px 0; }
+  .contact-button-container {
+    position: static;
+    margin: 0 0 10px 0; } }

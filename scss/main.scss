@@ -31,9 +31,10 @@ body {
   position: relative;
   .back-button {
     width: 50px;
+    background-color: $bg-gray;
     height: 23px;
     border: 1px solid $nonblack;
-    border-radius: 5px;
+    border-radius: 0 5px 5px 0 ;
     position: fixed;
     margin-top: -15px;
     z-index: 15;
@@ -49,15 +50,11 @@ body {
       }
     }
     &.fix-contact {
-      border: 1px solid white;
-      &:hover {
-        background-color: white;
-      }
+      border: 0;
+      background: transparent;
       p {
         color: white;
-        &:hover {
-          color: $secondary-blue;
-        }
+        font-weight: 600;
       }
     }
   }
@@ -156,7 +153,7 @@ a {
     position: fixed !important;
     top: 5px;
     margin-top: 0;
-    right: 5px;
+    right: -45px;
     background-color: transparent;
     border: 0;
     height: 43px;
@@ -327,6 +324,30 @@ a {
     .content-container {
       width: 90%;
     }
+  }
+
+}
+
+@media only screen and (max-width : $tablet) {
+
+  .container {
+    .content-container {
+      .content {
+        padding: 10px 0 20px 0;
+        .content-item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .button {
+    position: static;
+    margin: 0 0 10px 0;
+  }
+  .contact-button-container {
+    position: static;
+    margin: 0 0 10px 0;
   }
 
 }
