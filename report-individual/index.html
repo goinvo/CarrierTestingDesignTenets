@@ -16,7 +16,9 @@
   <body>
 		<div class="container">
 
-			<header class="header"></header>
+			<header class="header">
+        <p class="header-title">My Carrier Report</p>
+      </header>
 
       <a href="../index.html#reports">
         <div class="back-button">
@@ -48,166 +50,174 @@
 							<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
 						{{/isCarrier}}
 
+            <div class="content noline">
 
-						<div class="card-container {{^isCarrier}}disease-container{{/isCarrier}}">
-								<ul class="disease-list" id="disease-list">
-									{{#diseases}}
+  						<div class="card-container {{^isCarrier}}disease-container{{/isCarrier}}">
+  								<ul class="disease-list" id="disease-list">
+  									{{#diseases}}
 
-                    <li>
+                      <li>
 
-											<div class="card-item {{#carrier}}item-carrier{{/carrier}}">
-												<a href="#">{{name}}</a>
-												<p>{{description}}</p>
-											</div>
-												{{#carrier}}
-													<div class="status-tag tag-carrier">
-														<p>Carrier</p>
-													</div>
-												{{/carrier}}
-												{{^carrier}}
-													<div class="status-tag tag-noncarrier">
-														<p>Unlikely Carrier</p>
-													</div>
-												{{/carrier}}
+  											<div class="card-item {{#carrier}}item-carrier{{/carrier}}">
+  												<a href="#">{{name}}</a>
+  												<p>{{description}}</p>
+  											</div>
+  												{{#carrier}}
+  													<div class="status-tag tag-carrier">
+  														<p>Carrier</p>
+  													</div>
+  												{{/carrier}}
+  												{{^carrier}}
+  													<div class="status-tag tag-noncarrier">
+  														<p>Unlikely Carrier</p>
+  													</div>
+  												{{/carrier}}
 
-										</li>
+  										</li>
 
-									{{/diseases}}
-								</ul>
-						</div>
+  									{{/diseases}}
+  								</ul>
+  						</div>
 
-						{{#isCarrier}}
-							<p>You are unlikely to be a carrier for any of the others in the <a href="#">5 disease panel</a>.</p>
-						{{/isCarrier}}
-						{{^isCarrier}}
-							<p>View full list of the <a href="#">5 diseases tested</a>.</p>
-						{{/isCarrier}}
+  						{{#isCarrier}}
+  							<p>You are unlikely to be a carrier for any of the others in the <a href="#">5 disease panel</a>.</p>
+  						{{/isCarrier}}
+  						{{^isCarrier}}
+  							<p>View full list of the <a href="#">5 diseases tested</a>.</p>
+  						{{/isCarrier}}
+
+          </div>
 
 
-					<div class="line"></div>
 
-					<h2>A counselor is always available</h2>
-					<p>Still have questions? Review your results with a licensed genetic counselor. We are available 9am-5pm Monday through Friday.</p>
+          <div class="content">
+            <div class="content-item">
+              <h2>A counselor is always available</h2>
+  					  <p>Still have questions? Review your results with a licensed genetic
+                counselor. We are available 9am-5pm Monday through Friday.</p>
+            </div>
 
-					<div class="contact-button-container" id="contact-button-container">
-						<div class="contact button" id="contact-button">
-							<p>Contact Care Team</p>
-						</div>
-					</div>
+  					<div class="contact-button-container" id="contact-button-container">
+  						<div class="contact button" id="contact-button">
+  							<a href="#"><p><span class="hide">Contact </span>Care Team</p></a>
+  						</div>
+  					</div>
+          </div>
 
 					{{#isCarrier}}
-						<div class="line"></div>
 
-						<h2>Your children's risk is still undetermined</h2>
 
-						<p>Until we know if your partner is a carrier for the same diseases as you, the risk to your children is undetermined.</p>
+            <div class="content">
 
-						<!-- <div class="card-container">
+  						<h2>Your children's risk is still undetermined</h2>
 
-							<div class="risk-container">
-								<h2>If your partner IS NOT a carrier:</h2>
-								<p>Each child is unlikely to have the disease.</p>
-								<img class="graph" src="/img/graph-noncarrier.png">
-								<p>There is still less than a 1% chance you and your partner could be a carrier as we cannot test for all possible variants of the disease.</p>
-							</div>
+  						<p>Until we know if your partner is a carrier for the same diseases as you, the risk to your children is undetermined.</p>
 
-							<div id="divider"></div>
 
-							<div class="risk-container">
-								<h2>If your partner IS a carrier:</h2>
-								<p>Each child has a 25% chance of having the disease and a 75% chance of not having the disease.</p>
-								<img class="graph" src="/img/graph-carrier.png">
-								<p>The odds of your partner being a carrier depend on the disease, family history, and ethnicity.</p>
-							</div>
+              <table class="card-container risk-container">
 
-						</div> -->
-
-            <table class="card-container risk-container">
-
-              <tr class="risk-head">
-                <td>
-                  <h2>If your partner IS NOT a carrier:</h2>
-                  <p>Each child is unlikely to have the disease.</p>
-                </td>
-                <td>
-                  <h2>If your partner IS a carrier:</h2>
-                  <p>Each child has a 25% chance of having the disease and a 75%
-                    chance of not having the disease.</p>
-                </td>
-              </tr>
-              <tr>
-                <td><img class="graph" src="/img/graph-noncarrier.png"></td>
-                <td><img class="graph" src="/img/graph-carrier.png"></td>
-              </tr>
-              <tr>
-                <td>
-                  <p>There is still less than a 1% chance you and your partner
-                    could be a carrier as we cannot test for all possible variants
-                    of the disease.</p>
-                </td>
-                <td>
-                  <p>The odds of your partner being a carrier depend on the disease,
-                    family history, and ethnicity.</p>
+                <tr class="risk-head">
+                  <td>
+                    <h2>If your partner IS NOT a carrier:</h2>
+                    <p>Each child is unlikely to have the disease.</p>
+                  </td>
+                  <td>
+                    <h2>If your partner IS a carrier:</h2>
+                    <p>Each child has a 25% chance of having the disease and a 75%
+                      chance of not having the disease.</p>
                   </td>
                 </tr>
+                <tr>
+                  <td><img class="graph" src="/img/graph-noncarrier.png"></td>
+                  <td><img class="graph" src="/img/graph-carrier.png"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>There is still less than a 1% chance you and your partner
+                      could be a carrier as we cannot test for all possible variants
+                      of the disease.</p>
+                  </td>
+                  <td>
+                    <p>The odds of your partner being a carrier depend on the disease,
+                      family history, and ethnicity.</p>
+                    </td>
+                  </tr>
 
-						</table>
+  						</table>
 
-						<h2>Why should my partner BE tested?</h2>
-						<p>Some parents want to know their children's chance of inheriting a disease so that, if needed, they can:</p>
-						<ul class="bullet-list">
-							<li>Take precautionary measures during pregnancy.</li>
-							<li>Prepare for a child with disease before birth</li>
-							<li>Alter family plans.</li>
-						</ul>
+            </div>
 
-						<h2>Why should my partner NOT BE tested?</h2>
-						<p>Some parents do not want to know if they are a carrier of a disease, or want to wait until birth to know if their child has inherited any disease.</p>
+            <div class="content noline">
 
-						<a href="#">
-							<div class="button">
-								<p>Request partner's test</p>
-							</div>
-						</a>
-						<br>
+              <div class="content-item">
+                <h2>Why should my partner BE tested?</h2>
+    						<p>Some parents want to know their children's chance of inheriting a disease so that, if needed, they can:</p>
+    						<ul class="bullet-list">
+    							<li>Take precautionary measures during pregnancy.</li>
+    							<li>Prepare for a child with disease before birth</li>
+    							<li>Alter family plans.</li>
+    						</ul>
+
+    						<h2>Why should my partner NOT BE tested?</h2>
+    						<p>Some parents do not want to know if they are a carrier of a disease, or want to wait until birth to know if their child has inherited any disease.</p>
+              </div>
+
+
+  						<div class="button">
+  							<a href="#" class><p>Request partner's test</p></a>
+  						</div>
+
+            </div>
+
+
+
 					{{/isCarrier}}
 
 
-				<div class="line"></div>
 
-				<h2>Send your report to your family or doctor</h2>
+        <div class="content">
+          <div class="content-item">
+            <h2>Send your report to your family or doctor</h2>
 
-				{{#isCarrier}}
-					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
-					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
-					<br>
-				{{/isCarrier}}
+    				{{#isCarrier}}
+    					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
+    					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
+    					<br>
+    				{{/isCarrier}}
 
-				{{^isCarrier}}
-					<p>Share your good news with the important people in your life. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.</p>
-				{{/isCarrier}}
+    				{{^isCarrier}}
+    					<p>Share your good news with the important people in your life. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.</p>
+    				{{/isCarrier}}
 
-				<a href="#">
-					<div class="button">
-						<p>Choose who can view your report</p>
-					</div>
-				</a>
-				<br>
+          </div>
+
+
+  				<a href="#">
+  					<div class="button">
+  						<p>Grant report access to...</p>
+  					</div>
+  				</a>
+
+        </div>
+
+
 
 		</script>
 
 <!-- Generic content regardless of carrier status -->
 
-				<div class="line"></div>
 
-				<h2>Limitations</h2>
-				<p>This test is not able to guarantee your children will or will not inherit a disease but rather provide awareness to the likelihood of a child having a disease tested for.
-					<br><a href="#">Read the limitations</a> of this test to understand what is and is not covered.</p>
 
-				<div class="line"></div>
+        <div class="content">
+          <h2>Limitations</h2>
+  				<p>This test is not able to guarantee your children will or will not inherit a disease but rather provide awareness to the likelihood of a child having a disease tested for.
+  					<br><a href="#">Read the limitations</a> of this test to understand what is and is not covered.</p>
 
-				<h2>Test Details</h2>
-				<p>[Patient, sample, and laboratory information go here.]</p>
+  				<div class="line"></div>
+
+  				<h2>Test Details</h2>
+  				<p>[Patient, sample, and laboratory information go here.]</p>
+        </div>
 
 
 			</div>

@@ -13,14 +13,16 @@ body {
 .container {
   margin: 0 auto;
   background-color: white;
-  padding: 30px 0; }
+  padding: 30px 0;
+  position: relative; }
   .container .back-button {
     width: 50px;
     height: 23px;
     border: 1px solid #4A4A4A;
     border-radius: 5px;
     position: fixed;
-    margin-top: -15px; }
+    margin-top: -15px;
+    z-index: 15; }
     .container .back-button:hover {
       background-color: #4A4A4A; }
     .container .back-button p {
@@ -38,9 +40,20 @@ body {
         .container .back-button.fix-contact p:hover {
           color: #5ACCCC; }
   .container .content-container {
+    position: relative;
     width: 80%;
     max-width: 700px;
     margin: 0 auto; }
+    .container .content-container .content {
+      border-top: 1px solid #E0E0E0;
+      width: 100%;
+      padding: 20px 0 20px 0; }
+      .container .content-container .content.noline {
+        border-top: 0; }
+      .container .content-container .content .content-item {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top; }
 
 /* Font treatments (keep < 6)*/
 h1 {
@@ -75,23 +88,42 @@ a {
   left: 0px;
   height: 55px;
   width: 100%;
-  transition: background-color .2s; }
+  transition: background-color .2s;
+  z-index: 5; }
+  .header .header-title {
+    opacity: 0; }
   .header.fix-contact {
     background-color: #5ACCCC;
     box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.1); }
+    .header.fix-contact .header-title {
+      text-align: center;
+      color: white;
+      opacity: 1; }
 
 .contact-button-container {
   height: 55px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  z-index: 15;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  display: inline-block; }
 
 .contact {
-  transition: background-color .2s; }
+  transition: background-color .2s;
+  display: inline-block; }
   .contact.fix-contact {
-    position: fixed;
+    position: fixed !important;
     top: 5px;
+    margin-top: 0;
+    right: 5px;
     background-color: transparent;
-    border: 1px solid white;
-    height: 43px; }
+    border: 0;
+    height: 43px;
+    z-index: 10;
+    font-weight: 600; }
+    .contact.fix-contact .hide {
+      display: none; }
 
 /* Graphic Elements*/
 .disease-container {
@@ -115,7 +147,7 @@ a {
       padding-top: 15px;
       padding-bottom: 15px;
       display: inline-block;
-      width: 75%; }
+      width: 73%; }
       .disease-list li .card-item.item-carrier {
         width: 80%; }
       .disease-list li .card-item p, .disease-list li .card-item a {
@@ -141,6 +173,16 @@ a {
         text-align: center; }
     .disease-list li:last-child {
       border-bottom: 0; }
+
+@media only screen and (max-width: 560px) {
+  .disease-list li .card-item {
+    width: 78%; }
+  .disease-list li .status-tag.tag-noncarrier {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px; }
+  .disease-list li .status-tag.item-carrier {
+    width: 75%; } }
 
 .risk-container td {
   padding: 0 20px;
@@ -173,9 +215,13 @@ a {
 
 .button {
   border-radius: 5px;
-  width: 250px;
+  width: 200px;
   height: 45px;
-  background-color: #02A8A8; }
+  background-color: #02A8A8;
+  position: absolute;
+  right: 0;
+  margin-top: 28px;
+  display: inline-block; }
   .button p {
     text-align: center;
     color: white;
