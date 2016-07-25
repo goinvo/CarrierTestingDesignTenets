@@ -396,13 +396,17 @@ a {
     .example-list {
       list-style: none;
       padding-left: 0;
-      a:nth-child(2n) li {
+      &.example-list-second li {
+        height: 410px;
+      }
+      a:nth-child(even) li {
         margin-left: 2%;
       }
       li {
         padding: 15px 0 15px 0;
         margin-bottom: 10px;
         width: 47%;
+        height: 312px;
         display: inline-block;
         vertical-align: top;
         &.inactive {
@@ -463,7 +467,12 @@ a {
     }
   }
 
+  .license-container {
+    .license {
+      width: 90%;
+    }
 
+  }
 
 
 }
