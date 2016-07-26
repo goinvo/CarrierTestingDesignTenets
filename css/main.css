@@ -123,7 +123,7 @@ a {
 
 /* Graphic Elements*/
 .disease-container {
-  border: 1px solid black;
+  border: 1px solid #E0E0E0;
   height: 400px;
   overflow: auto; }
 
@@ -246,45 +246,35 @@ a {
     position: static;
     margin: 0 0 10px 0; } }
 
-.disease-list-new img {
-  width: 80px; }
+.risk-container-couple img {
+  width: 200px;
+  margin: 0 auto; }
 
 .disease-list-couple {
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-  .disease-list-couple li {
-    position: relative;
-    border-bottom: 1px solid #E0E0E0; }
-    .disease-list-couple li .card-item {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      display: inline-block;
-      width: 73%; }
-      .disease-list-couple li .card-item.item-carrier {
-        width: 80%; }
-      .disease-list-couple li .card-item p, .disease-list-couple li .card-item a {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 0;
-        margin-top: 0; }
-    .disease-list-couple li .status-tag {
-      display: inline-block;
-      position: absolute;
-      right: 20px;
-      background: #E0E0E0;
-      border-radius: 20px;
-      height: 30px;
-      margin-top: 17px;
-      vertical-align: top; }
-      .disease-list-couple li .status-tag.tag-carrier {
-        width: 70px; }
-      .disease-list-couple li .status-tag.tag-noncarrier {
-        width: 120px; }
-      .disease-list-couple li .status-tag p {
-        margin-top: 5px;
-        text-align: center; }
-      .disease-list-couple li .status-tag img {
-        width: 80px; }
-    .disease-list-couple li:last-child {
+  width: 100%; }
+  .disease-list-couple tr {
+    vertical-align: top; }
+    .disease-list-couple tr:last-of-type td {
       border-bottom: 0; }
+  .disease-list-couple .status-cell {
+    padding: 10px 0;
+    text-align: center;
+    width: 20%;
+    border-bottom: 1px solid #E0E0E0; }
+    .disease-list-couple .status-cell.noborder {
+      border-bottom: 0; }
+    .disease-list-couple .status-cell p {
+      margin: 0; }
+      .disease-list-couple .status-cell p.status-carrier {
+        font-weight: 600; }
+    .disease-list-couple .status-cell img {
+      width: 30px;
+      margin-top: 10px; }
+  .disease-list-couple .disease-cell {
+    padding: 10px 0;
+    width: 58%;
+    border-bottom: 1px solid #E0E0E0; }
+    .disease-list-couple .disease-cell.noborder {
+      border-bottom: 0; }
+    .disease-list-couple .disease-cell p {
+      margin-top: 5px; }

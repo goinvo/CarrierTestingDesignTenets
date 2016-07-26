@@ -189,13 +189,6 @@ a {
       border: 1px solid $bg-gray;
       border-radius: 5px;
       margin-bottom: 10px;
-      &.inactive {
-        opacity: 0.55;
-        &:hover {
-          border: 1px solid $bg-gray;
-          background-color: white;
-        }
-      }
       &:hover {
         border: 1px solid $primary-blue;
         background-color: #F0FFFF;
