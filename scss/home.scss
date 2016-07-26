@@ -8,9 +8,7 @@ $button-height: 45px;
 $tablet: 760px;
 $mobile: 480px;
 
-html {
-  height: 100%;
-}
+
 body {
   font-family: 'Hind', sans-serif;
   font-weight: 300;
@@ -242,7 +240,6 @@ a {
     display: inline-block;
     &.description {
       vertical-align: top;
-      // padding-left: 20px;
       width: 100%;
       h3, p {
         margin: 0;
@@ -353,7 +350,7 @@ a {
 }
 
 
-/* Smartphones (portrait) ----------- */
+/* Tablets (portrait) ----------- */
 
 @media only screen and (max-width : $tablet) {
   .header-links {
@@ -370,6 +367,9 @@ a {
     }
   }
 }
+
+
+/* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width : $mobile) {
   .header-links {
@@ -471,7 +471,6 @@ a {
       }
     }
   }
-
 
   .sample-container {
     .sample-item {
