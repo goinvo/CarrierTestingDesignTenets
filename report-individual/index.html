@@ -16,13 +16,19 @@
   <body>
 		<div class="container">
 
-			<header class="header">
+			<header class="header fix-contact">
         <p class="header-title">My Carrier Report</p>
       </header>
 
       <a href="../index.html#reports">
-        <div class="back-button">
+        <div class="back-button fix-contact">
           <p>Back</p>
+        </div>
+      </a>
+
+      <a href="#">
+        <div class="careteam">
+          <p>Care Team</p>
         </div>
       </a>
 
@@ -46,7 +52,7 @@
 						{{/isCarrier}}
 
 						{{^isCarrier}}
-							<h1>{{name}}, you are unlikely to be a carrier</h1>
+							<h1>{{name}}, you are unlikely to be a&nbsp;carrier</h1>
 							<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
 						{{/isCarrier}}
 
@@ -98,7 +104,7 @@
             </div>
 
   					<div class="contact-button-container" id="contact-button-container">
-  						<div class="contact button" id="contact-button">
+  						<div class="contact button fix-contact" id="contact-button">
   							<a href="#"><p><span class="hide">Contact </span>Care Team</p></a>
   						</div>
   					</div>

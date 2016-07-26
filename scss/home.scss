@@ -73,7 +73,7 @@ a {
 
 .header-links {
   position: absolute;
-  right: 50px;
+  right: 25px;
   top: 0;
   position: fixed;
   z-index: 20;
@@ -115,6 +115,7 @@ a {
     color: white;
     font-weight: 600;
     text-transform: uppercase;
+    font-weight: normal;
   }
 }
 
@@ -147,11 +148,12 @@ a {
 
 .validation-container {
   width:100%;
-  background-color: #C0F0F0;
+  background-color: rgba(0,122,122,0.7);
   text-align: justify;
   -ms-text-justify: distribute-all-lines;
   text-justify: distribute-all-lines;
   .validation {
+    opacity: 1;
     width: 80%;
     margin: 0 auto;
     max-width: 850px;
@@ -166,7 +168,7 @@ a {
         text-align: center;
         padding: 0 10px;
         font-weight: 400;
-        color: $nonblack;
+        color: white;
       }
     }
   }
@@ -353,6 +355,11 @@ a {
 /* Smartphones (portrait) ----------- */
 
 @media only screen and (max-width : $tablet) {
+  .header-links {
+    p {
+      padding: 0 10px;
+    }
+  }
   .validation-container {
     .validation {
       .validation-item {
@@ -368,6 +375,12 @@ a {
     right: 0;
     .hide {
       display: none;
+    }
+  }
+
+  .home-header{
+    .header-title {
+      padding-left: 20px;
     }
   }
 

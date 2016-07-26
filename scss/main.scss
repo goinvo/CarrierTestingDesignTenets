@@ -29,35 +29,6 @@ body {
   background-color: white;
   padding: 30px 0;
   position: relative;
-  .back-button {
-    width: 50px;
-    background-color: $bg-gray;
-    height: 23px;
-    border: 1px solid $nonblack;
-    border-radius: 0 5px 5px 0 ;
-    position: fixed;
-    margin-top: -15px;
-    z-index: 15;
-    &:hover {
-      background-color: $nonblack;
-    }
-    p {
-      margin: 0;
-      text-align: center;
-      color: $nonblack;
-      &:hover {
-        color: white;
-      }
-    }
-    &.fix-contact {
-      border: 0;
-      background: transparent;
-      p {
-        color: white;
-        font-weight: 600;
-      }
-    }
-  }
   .content-container {
     position: relative;
     width: 80%;
@@ -86,7 +57,8 @@ h1 {
   text-align: center;
   font-weight: 600;
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 60px;
+  line-height: 140%;
 }
 
 h2 {
@@ -136,10 +108,52 @@ a {
 
 }
 
+.back-button {
+  background-color: $bg-gray;
+  height: 23px;
+  border: 1px solid $nonblack;
+  border-radius: 0 5px 5px 0 ;
+  position: fixed;
+  margin: -15px 0 0 15px;
+  z-index: 15;
+  &:hover {
+    background-color: $nonblack;
+  }
+  p {
+    margin: 0;
+    text-align: center;
+    color: $nonblack;
+    &:hover {
+      color: white;
+    }
+  }
+  &.fix-contact {
+    border: 0;
+    background: transparent;
+    p {
+      color: white;
+      font-weight: 600;
+    }
+  }
+}
+
+.careteam {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  right: 15px;
+  background-color: transparent;
+  border: 0;
+  height: 43px;
+  z-index: 10;
+  font-weight: 600;
+  color: white;
+}
+
 .contact-button-container {
   height: 55px;
   margin-bottom: 20px;
-  z-index: 15;
+  // z-index: 15;
   width: 200px;
   position: absolute;
   right:0;
@@ -149,21 +163,23 @@ a {
 .contact {
   transition: background-color .2s;
   display: inline-block;
-  &.fix-contact {
-    position: fixed !important;
-    top: 5px;
-    margin-top: 0;
-    right: -45px;
-    background-color: transparent;
-    border: 0;
-    height: 43px;
-    z-index: 10;
-    font-weight: 600;
-    .hide {
-      display: none;
-    }
-  }
+  // &.fix-contact {
+  //   position: fixed !important;
+  //   top: 5px;
+  //   margin-top: 0;
+  //   right: -45px;
+  //   background-color: transparent;
+  //   border: 0;
+  //   height: 43px;
+  //   z-index: 10;
+  //   font-weight: 600;
+  //   .hide {
+  //     display: none;
+  //   }
+  // }
 }
+
+
 
 
 /* Graphic Elements*/
