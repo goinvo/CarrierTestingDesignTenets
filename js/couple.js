@@ -72,6 +72,7 @@ $( document ).ready(function() {
       if (risks.both) {
         couple.riskStatus4 = true;
         couple.isOverallCarrier = true;
+        couple.atRisk = true;
         couple.diseases = sortDiseases(couple.diseases);
       } else if (risks.patient1 && risks.patient2) {
         couple.riskStatus3 = true;

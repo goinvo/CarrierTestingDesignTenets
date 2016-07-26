@@ -77,55 +77,125 @@
 						{{/riskStatus4}}
 
 
+						<table class="disease-list-couple">
+							<thead>
+								<tr>
+									<th class="status-cell disease-head">{{patient1}}</th>
+									<th class="disease-cell disease-head">Disease</th>
+									<th class="status-cell disease-head">{{patient2}}</th>
+								</tr>
+							</thead>
+						</table>
+
+						<div class="card-container {{^isOverallCarrier}}disease-container{{/isOverallCarrier}}">
 
 
-					{{^isOverallCarrier}}
+							<table class="disease-list-couple">
+								<tbody>
+										{{#diseases}}
+											<tr>
+												<td class="status-cell">
+													{{#patient1IsCarrier}}
+														<p class="status-carrier-1">carrier<p>
+														<img src="/img/carrier-1.png"/>
+													{{/patient1IsCarrier}}
+													{{^patient1IsCarrier}}
+														<p>unlikely carrier<p>
+														<img src="/img/carrier-0.png"/>
+													{{/patient1IsCarrier}}
+												</td>
+												<td class="disease-cell">
+													<a href="#">
+														{{name}}
+													</a>
+													<p>
+														{{description}}
+													</p>
+												</td>
+												<td class="status-cell">
+													{{#patient2IsCarrier}}
+														<p class="status-carrier-2">carrier<p>
+														<img src="/img/carrier-2.png"/>
+													{{/patient2IsCarrier}}
+													{{^patient2IsCarrier}}
+														<p>unlikely carrier<p>
+														<img src="/img/carrier-0.png"/>
+													{{/patient2IsCarrier}}
+												</td>
+											</tr>
+										{{/diseases}}
+								</tbody>
+							</table>
 
-            <div class="content risk-container-couple">
+					</div>
 
-  						<h2>Continue on with your family planning.<br>No further action is recommended.</h2>
-
-  						<p>
-								Each of your children is unlikely to have any of the diseases we test for.
-								However, each child has a 50% chance of being a carrier of any of the same
-								diseases as you and your partner. When your children grow up it will be
-								helpful to inform them of this possibility.
-								<br><a href="#">Learn why</a>
-							</p>
-
-							<img src="/img/graph-noncarrier.png">
-							<p>
-								There is still less than a 1% chance that you or Ryan could be a carrier
-								as we cannot test for all possible variants of the disease.
-							</p>
-
-            </div>
-
-					{{/isOverallCarrier}}
 
 					{{#isOverallCarrier}}
+						<p>Both of you are unlikely to be a carrier for any of the others in the <a href="#">5 disease panel</a>.</p>
+					{{/isOverallCarrier}}
 
-            <div class="content risk-container-couple">
+					{{^isOverallCarrier}}
+						<p>View full list of the <a href="#">5 diseases tested</a>.</p>
+					{{/isOverallCarrier}}
 
-  						<h2>Continue on with your family planning.<br>No further action is recommended.</h2>
 
-  						<p>
-								Each of your children is unlikely to have any of the diseases we test for.
-								However, each child has a 50% chance of being a carrier of any of the same
-								diseases as you and your partner. When your children grow up it will be
-								helpful to inform them of this possibility.
-								<br><a href="#">Learn why</a>
-							</p>
 
-							<img src="/img/graph-noncarrier.png">
-							<p>
-								There is still less than a 1% chance that you or Ryan could be a carrier
-								as we cannot test for all possible variants of the disease.
-							</p>
+					{{^atRisk}}
+
+            <div class="content noline risk-container-couple">
+
+  						<div class="risk-item-couple">
+								<h2>Continue on with your family planning.<br>No further action is recommended.</h2>
+
+	  						<p>
+									Each of your children is unlikely to have any of the diseases we test for.
+									However, each child has a 50% chance of being a carrier of any of the same
+									diseases as you and your partner. When your children grow up it will be
+									helpful to inform them of this possibility.
+									<br><a href="#">Learn why</a>
+								</p>
+
+							</div>
+
+							<div class="risk-item-couple">
+
+								<img src="/img/graph-noncarrier.png">
+
+								<p>
+									There is still less than a 1% chance that you or Ryan could be a carrier
+									as we cannot test for all possible variants of the disease.
+								</p>
+
+							</div>
 
             </div>
 
-					{{/isOverallCarrier}}
+					{{/atRisk}}
+
+					{{#atRisk}}
+
+					<div class="content noline risk-container-couple">
+
+						<div class="risk-item-couple">
+							<h2>Each child has a 25% chance of having the disease and 75% chance not having the disease.</h2>
+
+							<p>
+								Each child also has a 50% chance of being a carrier of any of the same diseases as you and
+								your partner. When your children grow up it will be helpful to inform them of this possibility.
+								<br><a href="#">Learn why</a>
+							</p>
+
+						</div>
+
+						<div class="risk-item-couple">
+
+							<img src="/img/graph-carrier.png">
+
+						</div>
+
+					</div>
+
+					{{/atRisk}}
 
 
 					<div class="content">
@@ -144,69 +214,7 @@
 
 
 
-					<table class="disease-list-couple">
-						<thead>
-							<tr>
-								<th class="status-cell noborder">{{patient1}}</th>
-								<th class="disease-cell noborder">Disease</th>
-								<th class="status-cell noborder">{{patient2}}</th>
-							</tr>
-						</thead>
-					</table>
-
-					<div class="card-container {{^isOverallCarrier}}disease-container{{/isOverallCarrier}}">
-
-
-						<table class="disease-list-couple">
-							<tbody>
-									{{#diseases}}
-										<tr>
-											<td class="status-cell">
-												{{#patient1IsCarrier}}
-													<p class="status-carrier">carrier<p>
-													<img src="/img/carrier-1.png"/>
-												{{/patient1IsCarrier}}
-												{{^patient1IsCarrier}}
-													<p>unlikely carrier<p>
-													<img src="/img/carrier-0.png"/>
-												{{/patient1IsCarrier}}
-											</td>
-											<td class="disease-cell">
-												<a href="#">
-													{{name}}
-												</a>
-												<p>
-													{{description}}
-												</p>
-											</td>
-											<td class="status-cell">
-												{{#patient2IsCarrier}}
-													<p class="status-carrier">carrier<p>
-													<img src="/img/carrier-2.png"/>
-												{{/patient2IsCarrier}}
-												{{^patient2IsCarrier}}
-													<p>unlikely carrier<p>
-													<img src="/img/carrier-0.png"/>
-												{{/patient2IsCarrier}}
-											</td>
-										</tr>
-									{{/diseases}}
-							</tbody>
-						</table>
-
-				</div>
-
-				{{#isOverallCarrier}}
-					<p>Both of you are unlikely to be a carrier for any of the others in the <a href="#">5 disease panel</a>.</p>
-				{{/isOverallCarrier}}
-
-				{{^isOverallCarrier}}
-					<p>View full list of the <a href="#">5 diseases tested</a>.</p>
-				{{/isOverallCarrier}}
-
-
-
-        <div class="content noline">
+        <div class="content">
           <div class="content-item">
             <h2>Send your report to your family or doctor</h2>
 

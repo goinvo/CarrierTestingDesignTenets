@@ -246,9 +246,18 @@ a {
     position: static;
     margin: 0 0 10px 0; } }
 
-.risk-container-couple img {
-  width: 200px;
-  margin: 0 auto; }
+.risk-container-couple .risk-item-couple {
+  vertical-align: top;
+  width: 48%;
+  display: inline-block; }
+  .risk-container-couple .risk-item-couple h2 {
+    margin: 0; }
+  .risk-container-couple .risk-item-couple img {
+    display: block;
+    width: 200px;
+    margin: 0 auto; }
+  .risk-container-couple .risk-item-couple:last-of-type {
+    padding-left: 3%; }
 
 .disease-list-couple {
   width: 100%; }
@@ -256,25 +265,33 @@ a {
     vertical-align: top; }
     .disease-list-couple tr:last-of-type td {
       border-bottom: 0; }
-  .disease-list-couple .status-cell {
-    padding: 10px 0;
-    text-align: center;
-    width: 20%;
-    border-bottom: 1px solid #E0E0E0; }
-    .disease-list-couple .status-cell.noborder {
-      border-bottom: 0; }
-    .disease-list-couple .status-cell p {
-      margin: 0; }
-      .disease-list-couple .status-cell p.status-carrier {
-        font-weight: 600; }
-    .disease-list-couple .status-cell img {
-      width: 30px;
-      margin-top: 10px; }
-  .disease-list-couple .disease-cell {
-    padding: 10px 0;
-    width: 58%;
-    border-bottom: 1px solid #E0E0E0; }
-    .disease-list-couple .disease-cell.noborder {
-      border-bottom: 0; }
-    .disease-list-couple .disease-cell p {
-      margin-top: 5px; }
+    .disease-list-couple tr .status-cell {
+      padding: 10px 0;
+      text-align: center;
+      width: 25%;
+      border-bottom: 1px solid #E0E0E0; }
+      .disease-list-couple tr .status-cell.disease-head {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: -20px; }
+      .disease-list-couple tr .status-cell p {
+        margin: 0; }
+        .disease-list-couple tr .status-cell p.status-carrier-1 {
+          font-weight: 600;
+          color: #F5B16E; }
+        .disease-list-couple tr .status-cell p.status-carrier-2 {
+          font-weight: 600;
+          color: #FA8888; }
+      .disease-list-couple tr .status-cell img {
+        width: 30px;
+        margin-top: 10px; }
+    .disease-list-couple tr .disease-cell {
+      padding: 10px 0;
+      width: 50%;
+      border-bottom: 1px solid #E0E0E0; }
+      .disease-list-couple tr .disease-cell.disease-head {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: -20px; }
+      .disease-list-couple tr .disease-cell p {
+        margin: 5px 0 5px 0; }
