@@ -6,6 +6,7 @@
 	<head>
 		<title>Carrier Testing Design Template</title>
 		<link href="https://fonts.googleapis.com/css?family=Hind:300,400,600,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Sura" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<script src="../vendor/jquery.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -18,6 +19,10 @@
 
 			<header class="header fix-contact">
         <p class="header-title">My Carrier Report</p>
+				<div class="research-toggle">
+					<p class="show-research">Show Research</p>
+					<p class="hide-research">Hide Research</p>
+				</div>
       </header>
 
       <a href="../index.html#reports">
@@ -55,6 +60,33 @@
 							<h1>{{name}}, you are unlikely to be a&nbsp;carrier</h1>
 							<h2 class="subheader">Each child is unlikely to have a disease we've tested for.</h2>
 						{{/isCarrier}}
+
+<!-- Research validation, not part of report______________________________________ -->
+
+						{{#isCarrier}}
+							<div class="research" id="carrier">
+								<p>
+									"Reassuring not to feel so alone in being a carrier" <span class="italic">-3 patients</span>
+								</p>
+							</div>
+						{{/isCarrier}}
+
+						{{^isCarrier}}
+							<div class="research" id="language">
+								<p>
+									"Accurate language, it's how the GC would talk about it" <span class="italic">-1 patient, 2 clinicians</span>
+								</p>
+							</div>
+						{{/isCarrier}}
+
+						<div class="research" id="info">
+							<p>
+								"This level of info is appropriate for the patient at this point" <span class="italic">-clinican</span>
+							</p>
+						</div>
+
+<!-- ______________________________________________________________________________ -->
+
 
             <div class="content noline">
 
@@ -94,6 +126,18 @@
 
           </div>
 
+<!-- Research validation, not part of report______________________________________ -->
+
+					{{^isCarrier}}
+						<div class="research" id="reminder">
+							<p>
+								"Nice reminder of what the test is doing for me" <span class="italic">-2 patients</span>
+							</p>
+						</div>
+					{{/isCarrier}}
+
+<!-- ______________________________________________________________________________ -->
+
 
 
           <div class="content">
@@ -109,6 +153,17 @@
   						</div>
   					</div>
           </div>
+
+<!-- Research validation, not part of report______________________________________ -->
+
+					<div class="research" id="contact">
+						<p>
+							"Like that there's always someone available to reach out to directly" <span class="italic">-5 patients, 2 clinicans</span>
+						</p>
+					</div>
+
+<!-- ______________________________________________________________________________ -->
+
 
 					{{#isCarrier}}
 
@@ -151,6 +206,22 @@
 
   						</table>
 
+<!-- Research validation, not part of report______________________________________ -->
+
+							<div class="research" id="partner-test">
+								<p>
+									"Clear info on why the partner should be tested" <span class="italic">-unanimous</span>
+								</p>
+							</div>
+
+							<div class="research" id="understand">
+								<p>
+									"I understand what my next step should be" <span class="italic">-3 patients</span>
+								</p>
+							</div>
+
+<!-- ______________________________________________________________________________ -->
+
             </div>
 
             <div class="content noline">
@@ -168,6 +239,21 @@
     						<p>Some parents do not want to know if they are a carrier of a disease, or want to wait until birth to know if their child has inherited any disease.</p>
               </div>
 
+ <!-- Research validation, not part of report______________________________________ -->
+
+							<div class="research" id="diplomatic">
+								<p>
+									"Very diplomatic, in a positive way" <span class="italic">-patient</span>
+								</p>
+							</div>
+
+							<div class="research" id="desire">
+								<p>
+									"Appreciate that you're being mindful of people's desire not to know" <span class="italic">-patient</span>
+								</p>
+							</div>
+
+<!-- ______________________________________________________________________________ -->
 
   						<div class="button">
   							<a href="#" class><p>Request partner's test</p></a>
@@ -203,6 +289,17 @@
   						<p>Grant report access to...</p>
   					</div>
   				</a>
+
+
+<!-- Research validation, not part of report______________________________________ -->
+
+					<div class="research" id="send">
+						<p>
+							"Good that you're telling me with who, why, and how to send it" <span class="italic">-4 patients</span>
+						</p>
+					</div>
+
+<!-- ______________________________________________________________________________ -->
 
         </div>
 

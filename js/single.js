@@ -89,4 +89,11 @@ $( document ).ready(function() {
 
   });
 
+  $researchToggle = $('.research-toggle'),
+
+  $researchToggle.click(function() {
+    $( ".research").toggleClass('research-on');
+    $( ".research-toggle").toggleClass('research-on');
+  });
+
 });

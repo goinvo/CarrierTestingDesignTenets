@@ -145,7 +145,36 @@ a {
     right: 0;
     margin-top: -20px; }
   .research#header {
-    margin-top: -240px; }
+    margin-top: -180px; }
+  .research#carrier {
+    margin-top: -30px; }
+  .research#info {
+    right: 0;
+    margin-top: -150px; }
+  .research#contact {
+    right: 0;
+    margin-top: -120px; }
+  .research#language {
+    margin-top: -60px; }
+  .research#partner-test {
+    margin-top: -380px; }
+  .research#understand {
+    right: 0;
+    margin-top: -30px; }
+  .research#desire {
+    right: 0;
+    margin-top: -200px; }
+  .research#diplomatic {
+    right: 0;
+    margin-top: -60px; }
+  .research#sensitive {
+    margin-top: -30px; }
+  .research#send {
+    right: 0;
+    margin-top: -100px; }
+  .research#reminder {
+    margin-top: -300px;
+    margin-left: calc(50% - 100px); }
 
 .contact-button-container {
   height: 55px;

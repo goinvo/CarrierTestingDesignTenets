@@ -84,6 +84,35 @@
 						{{/riskStatus4}}
 
 
+
+<!-- Research validation, not part of report______________________________________ -->
+
+						{{^atRisk}}
+							<div class="research" id="header">
+								<p>
+									"Informative, clear, but not alarming"<span class="italic"> -5 patients</span>
+								</p>
+							</div>
+						{{/atRisk}}
+
+						{{^isOverallCarrier}}
+							<div class="research" id="language">
+								<p>
+									"Accurate language, it's how the GC would talk about it" <span class="italic">-1 patient, 2 clinicians</span>
+								</p>
+							</div>
+						{{/isOverallCarrier}}
+
+						{{#isOverallCarrier}}
+							<div class="research" id="info">
+								<p>
+									"This level of info is appropriate for the patient at this point" <span class="italic">-clinican</span>
+								</p>
+							</div>
+						{{/isOverallCarrier}}
+
+<!-- ______________________________________________________________________________ -->
+
 						<table class="disease-list-couple">
 							<thead>
 								<tr>
@@ -95,15 +124,6 @@
 						</table>
 
 						<div class="card-container {{^isOverallCarrier}}disease-container{{/isOverallCarrier}}">
-
-
-						{{^atRisk}}
-							<div class="research" id="header">
-								<p>
-									"Informative, clear, but not alarming"<span class="italic"> -5 patients</span>
-								</p>
-							</div>
-						{{/atRisk}}
 
 							<table class="disease-list-couple">
 								<tbody>
@@ -152,6 +172,18 @@
 
 					</div>
 
+<!-- Research validation, not part of report______________________________________ -->
+
+					{{^isOverallCarrier}}
+						<div class="research" id="reminder">
+							<p>
+								"Nice reminder of what the test is doing for me" <span class="italic">-2 patients</span>
+							</p>
+						</div>
+					{{/isOverallCarrier}}
+
+<!-- ______________________________________________________________________________ -->
+
 
 					{{#isOverallCarrier}}
 						<p>Both of you are unlikely to be a carrier for any of the others in the <a href="#">5 disease panel</a>.</p>
@@ -182,11 +214,15 @@
 
 							<img src="/img/graph-noncarrier.png">
 
+<!-- Research validation, not part of report______________________________________ -->
+
 								<div class="research" id="graph">
 									<p>
 										"This visual speaks to the patient and the way they think about results" <span class="italic">-clinician</span>
 									</p>
 								</div>
+
+<!-- ______________________________________________________________________________ -->
 
             </div>
 
@@ -209,11 +245,15 @@
 
 						<img src="/img/graph-carrier.png">
 
+<!-- Research validation, not part of report______________________________________ -->
+
 						<div class="research" id="graph">
 							<p>
 								"This visual speaks to the patient and the way they think about results" <span class="italic">-clinician</span>
 							</p>
 						</div>
+
+<!-- ______________________________________________________________________________ -->
 
 					</div>
 
@@ -234,21 +274,38 @@
 						</div>
 					</div>
 
+<!-- Research validation, not part of report______________________________________ -->
+
+					<div class="research" id="contact">
+						<p>
+							"Like that there's always someone available to reach out to directly" <span class="italic">-5 patients, 2 clinicans</span>
+						</p>
+					</div>
+
+					{{#atRisk}}
+						<div class="research" id="sensitive">
+							<p>
+								"Should be talking to a genetic counselor WHILE viewing this sensitive of a result" <span class="italic">-6 patients, 2 clinicans</span>
+							</p>
+						</div>
+					{{/atRisk}}
+
+<!-- ______________________________________________________________________________ -->
 
 
         <div class="content">
           <div class="content-item">
             <h2>Send your report to your family or doctor</h2>
 
-    				{{#isCarrier}}
+    				{{#isOverallCarrier}}
     					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
     					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
     					<br>
-    				{{/isCarrier}}
+    				{{/isOverallCarrier}}
 
-    				{{^isCarrier}}
+    				{{^isOverallCarrier}}
     					<p>Share your good news with the important people in your life. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.</p>
-    				{{/isCarrier}}
+    				{{/isOverallCarrier}}
 
           </div>
 
@@ -259,14 +316,24 @@
   					</div>
   				</a>
 
+<!-- Research validation, not part of report______________________________________ -->
+
+					<div class="research" id="send">
+						<p>
+							"Good that you're telling me with who, why, and how to send it" <span class="italic">-4 patients</span>
+						</p>
+					</div>
+
+<!-- ______________________________________________________________________________ -->
+
         </div>
 
 
 
 		</script>
 
-<!-- Generic content regardless of carrier status -->
 
+<!-- Generic content regardless of carrier status -->
 
 
         <div class="content">
