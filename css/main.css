@@ -110,11 +110,10 @@ a {
   color: white; }
 
 .research-toggle {
-  position: fixed;
   font-weight: 600;
   color: white;
   z-index: 15;
-  margin: -31px 0 0 100px; }
+  margin: -44px 0 0 100px; }
   .research-toggle .show-research {
     display: block; }
   .research-toggle .hide-research {
@@ -202,16 +201,6 @@ a {
     .disease-list li:last-child {
       border-bottom: 0; }
 
-@media only screen and (max-width: 560px) {
-  .disease-list li .card-item {
-    width: 78%; }
-  .disease-list li .status-tag.tag-noncarrier {
-    width: 70px;
-    height: 60px;
-    border-radius: 5px; }
-  .disease-list li .status-tag.item-carrier {
-    width: 75%; } }
-
 .risk-container td {
   padding: 0 20px;
   width: 49%;
@@ -231,12 +220,6 @@ a {
     width: 180px;
     height: auto;
     margin: auto; }
-
-@media only screen and (max-width: 560px) {
-  .risk-container td {
-    padding: 0 8px; }
-    .risk-container td .graph {
-      width: 100%; } }
 
 .bullet-list {
   padding-left: 18px; }
@@ -266,6 +249,20 @@ a {
   .container .content-container {
     width: 90%; } }
 
+@media only screen and (max-width: 560px) {
+  .risk-container td {
+    padding: 0 8px; }
+    .risk-container td .graph {
+      width: 100%; }
+  .disease-list li .card-item {
+    width: 78%; }
+  .disease-list li .status-tag.tag-noncarrier {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px; }
+  .disease-list li .status-tag.item-carrier {
+    width: 75%; } }
+
 @media only screen and (max-width: 760px) {
   .container .content-container .content {
     padding: 10px 0 20px 0; }
@@ -276,7 +273,28 @@ a {
     margin: 0 0 10px 0; }
   .contact-button-container {
     position: static;
-    margin: 0 0 10px 0; } }
+    margin: 0 0 10px 0; }
+  .research-toggle {
+    display: block;
+    background-color: #02A8A8;
+    border-radius: 0 0 20px 0px;
+    color: white;
+    z-index: 1;
+    margin: -3px 0 0 0;
+    width: 125px;
+    height: 35px;
+    text-align: center; }
+    .research-toggle p {
+      margin: 0;
+      padding-top: 5px; }
+    .research-toggle .show-research {
+      display: block; }
+    .research-toggle .hide-research {
+      display: none; }
+    .research-toggle.research-on .show-research {
+      display: none; }
+    .research-toggle.research-on .hide-research {
+      display: block; } }
 
 .risk-container-couple .risk-item-couple {
   vertical-align: top;

@@ -6,6 +6,7 @@ $button-width: 200px;
 $button-height: 45px;
 
 $tablet: 760px;
+$mob-tab: 560px;
 $mobile: 480px;
 
 
@@ -149,11 +150,11 @@ a {
 }
 
 .research-toggle {
-  position: fixed;
+
   font-weight: 600;
   color: white;
   z-index: 15;
-  margin: -31px 0 0 100px;
+  margin: -44px 0 0 100px;
   .show-research {
     display:block;
   }
@@ -287,25 +288,6 @@ a {
   }
 }
 
-@media only screen and (max-width : 560px) {
-  .disease-list {
-    li {
-      .card-item {
-        width: 78%;
-      }
-      .status-tag {
-        &.tag-noncarrier {
-          width: 70px;
-          height: 60px;
-          border-radius: 5px;
-        }
-        &.item-carrier {
-          width: 75%;
-        }
-      }
-    }
-  }
-}
 
 
 .risk-container {
@@ -331,17 +313,6 @@ a {
       width: 180px;
       height: auto;
       margin: auto;
-    }
-  }
-}
-
-@media only screen and (max-width : 560px) {
-  .risk-container {
-    td {
-      padding: 0 8px;
-      .graph {
-        width: 100%;
-      }
     }
   }
 }
@@ -389,6 +360,37 @@ a {
 
 }
 
+@media only screen and (max-width : $mob-tab) {
+
+  .risk-container {
+    td {
+      padding: 0 8px;
+      .graph {
+        width: 100%;
+      }
+    }
+  }
+
+  .disease-list {
+    li {
+      .card-item {
+        width: 78%;
+      }
+      .status-tag {
+        &.tag-noncarrier {
+          width: 70px;
+          height: 60px;
+          border-radius: 5px;
+        }
+        &.item-carrier {
+          width: 75%;
+        }
+      }
+    }
+  }
+
+}
+
 @media only screen and (max-width : $tablet) {
 
   .container {
@@ -409,6 +411,36 @@ a {
   .contact-button-container {
     position: static;
     margin: 0 0 10px 0;
+  }
+
+  .research-toggle {
+    display: block;
+    background-color: $primary-blue;
+    border-radius: 0 0 20px 0px;
+    color: white;
+    z-index: 1;
+    margin: -3px 0 0 0;
+    width: 125px;
+    height: 35px;
+    text-align: center;
+    p {
+      margin: 0;
+      padding-top: 5px;
+    }
+    .show-research {
+      display:block;
+    }
+    .hide-research {
+      display: none;
+    }
+    &.research-on {
+      .show-research {
+        display: none;
+      }
+      .hide-research {
+        display: block;
+      }
+    }
   }
 
 }
