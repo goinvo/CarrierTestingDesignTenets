@@ -181,6 +181,7 @@ a {
   position: absolute;
   display: none;
   max-width: 200px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
   p {
     padding: 10px;
     margin: 0;
@@ -238,6 +239,10 @@ a {
   }
   &#reminder {
     margin-top: -300px;
+    margin-left: calc(50% - 100px);
+  }
+  &#comparison {
+    margin-top: -150px;
     margin-left: calc(50% - 100px);
   }
 }
