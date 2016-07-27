@@ -139,7 +139,7 @@ a {
   position: fixed;
   top: 0;
   margin-top: 0;
-  right: 15px;
+  right: 25px;
   background-color: transparent;
   border: 0;
   height: 43px;
@@ -147,6 +147,53 @@ a {
   font-weight: 600;
   color: white;
 }
+
+.research-toggle {
+  position: fixed;
+  font-weight: 600;
+  color: white;
+  z-index: 15;
+  margin: -31px 0 0 100px;
+  .show-research {
+    display:block;
+  }
+  .hide-research {
+    display: none;
+  }
+  &.research-on {
+    .show-research {
+      display: none;
+    }
+    .hide-research {
+      display: block;
+    }
+  }
+}
+
+
+.research {
+  background-color: rgba(212,212,212,0.7);
+  z-index: 3;
+  position: absolute;
+  display: none;
+  p {
+    padding: 10px;
+    margin: 0;
+    max-width: 200px;
+    font-family: 'Sura', serif;
+    font-size: .8em;
+  }
+  &.research-on {
+    display: block;
+  }
+  &#graph {
+    right: -40px;
+    margin-top: -30px;
+  }
+}
+
+
+
 
 .contact-button-container {
   height: 55px;
@@ -383,17 +430,15 @@ a {
     width: 200px;
     position: absolute;
     right: 0;
-    margin: 0;
   }
 
 }
 
 @media only screen and (max-width : $tablet) {
-
   .risk-container-couple {
     .risk-item-couple {
       width: 100%;
-      display: inline-block;
+      display: block;
     }
     img {
       display: block;
@@ -401,9 +446,7 @@ a {
       margin: 0 auto;
       margin-bottom: 20px;
     }
-
   }
-
 }
 
 .disease-list-couple {
@@ -414,9 +457,6 @@ a {
       td {
         border-bottom: 0;
       }
-    }
-    th {
-
     }
     .status-cell {
       padding: 10px 0;
@@ -462,9 +502,6 @@ a {
       }
       p {
         margin: 5px 0 5px 0;
-        &.residual {
-          font-weight: 400;
-        }
       }
     }
   }

@@ -95,7 +95,7 @@
       },
       {
         "patient1IsCarrier": false,
-        "patient2IsCarrier": true,
+        "patient2IsCarrier": false,
         "name": "GJB2 Related hearing loss",
         "description": "Hearing loss that varies from mild to profound, is typically present at birth, and does not worsen over time.",
         "residual": "0.0005%"
@@ -109,7 +109,7 @@
       },
       {
         "patient1IsCarrier": false,
-        "patient2IsCarrier": false,
+        "patient2IsCarrier": true,
         "name": "Tay-Sachs Disease",
         "description": "Loss of motor skills, seizures, vision and hearling loss, intellectual disability, and/or paralysis"
       }
@@ -133,8 +133,8 @@
         "residual": "0.0004%"
       },
       {
-        "patient1IsCarrier": false,
-        "patient2IsCarrier": false,
+        "patient1IsCarrier": true,
+        "patient2IsCarrier": true,
         "name": "GJB2 Related hearing loss",
         "description": "Hearing loss that varies from mild to profound, is typically present at birth, and does not worsen over time."
       },
@@ -145,11 +145,10 @@
         "description": "Sweet smelling urine, poor feeding, vomiting, lack of energy, and developmental delay."
       },
       {
-        "patient1IsCarrier": true,
-        "patient2IsCarrier": true,
+        "patient1IsCarrier": false,
+        "patient2IsCarrier": false,
         "name": "Tay-Sachs Disease",
-        "description": "Loss of motor skills, seizures, vision and hearling loss, intellectual disability, and/or paralysis",
-        "residual": "25%"
+        "description": "Loss of motor skills, seizures, vision and hearling loss, intellectual disability, and/or paralysis"
       }
     ]
   }

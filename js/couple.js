@@ -62,7 +62,6 @@ $( document ).ready(function() {
 
         $.each(diseases, function(i, disease) {
           if (diseases[i].riskStatus === 2) {
-            console.log(disease.name);
             couple.diseasePositive = disease.name;
           }
         });
@@ -100,6 +99,13 @@ $( document ).ready(function() {
 
     });
 
+  });
+
+  $researchToggle = $('.research-toggle'),
+
+  $researchToggle.click(function() {
+    $( ".research").toggleClass('research-on');
+    $( ".research-toggle").toggleClass('research-on');
   });
 
 });
