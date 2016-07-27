@@ -249,7 +249,7 @@ a {
 
 .button {
   display: inline-block;
-  width: 200px;
+  width: 220px;
   height: 40px;
   border: 1px solid $primary-blue;
   border-radius: 5px;
@@ -354,8 +354,11 @@ a {
   .validation-container {
     .validation {
       .validation-item {
-        width: 120px;
+        width: 125px;
         height: 85px;
+        p {
+          padding:0;
+        }
       }
     }
   }

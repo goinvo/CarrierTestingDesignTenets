@@ -60,6 +60,13 @@ $( document ).ready(function() {
           }
         }
 
+        $.each(diseases, function(i, disease) {
+          if (diseases[i].riskStatus === 2) {
+            console.log(disease.name);
+            couple.diseasePositive = disease.name;
+          }
+        });
+
         diseases.sort(function(a, b) {
             return b.riskStatus - a.riskStatus;
         });

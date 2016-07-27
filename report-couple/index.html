@@ -70,9 +70,9 @@
 						{{/riskStatus3}}
 
 						{{#riskStatus4}}
-							<h1>Your children have a 25% chance of inheriting</h1>
+							<h1>Your children have a 25% chance of inheriting {{diseasePositive}}</h1>
 							<h2 class="subheader">
-								{{patient1}} and {{patient2}} are both carriers for {{#diseases}}{{name}}{{/diseases}}
+								{{patient1}} and {{patient2}} are both carriers for {{diseasePositive}}
 							</h2>
 						{{/riskStatus4}}
 
@@ -100,17 +100,25 @@
 														<img src="/img/carrier-1.png"/>
 													{{/patient1IsCarrier}}
 													{{^patient1IsCarrier}}
-														<p>unlikely carrier<p>
+														<p class="status-carrier-0">unlikely carrier<p>
 														<img src="/img/carrier-0.png"/>
 													{{/patient1IsCarrier}}
 												</td>
 												<td class="disease-cell">
-													<a href="#">
+													<a href="#" class="disease-name">
 														{{name}}
 													</a>
 													<p>
 														{{description}}
 													</p>
+
+													{{#residual}}
+														<p class="residual">
+															Your children are unlikely ({{residual}}) to have this disease.
+														</p>
+													{{/residual}}
+
+
 												</td>
 												<td class="status-cell">
 													{{#patient2IsCarrier}}
@@ -118,7 +126,7 @@
 														<img src="/img/carrier-2.png"/>
 													{{/patient2IsCarrier}}
 													{{^patient2IsCarrier}}
-														<p>unlikely carrier<p>
+														<p class="status-carrier-0">unlikely carrier<p>
 														<img src="/img/carrier-0.png"/>
 													{{/patient2IsCarrier}}
 												</td>
@@ -157,16 +165,11 @@
 
 							</div>
 
-							<div class="risk-item-couple">
 
-								<img src="/img/graph-noncarrier.png">
 
-								<p>
-									There is still less than a 1% chance that you or Ryan could be a carrier
-									as we cannot test for all possible variants of the disease.
-								</p>
+							<img src="/img/graph-noncarrier.png">
 
-							</div>
+
 
             </div>
 
@@ -187,11 +190,11 @@
 
 						</div>
 
-						<div class="risk-item-couple">
 
-							<img src="/img/graph-carrier.png">
 
-						</div>
+						<img src="/img/graph-carrier.png">
+
+
 
 					</div>
 

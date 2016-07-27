@@ -372,19 +372,36 @@ a {
 .risk-container-couple {
   .risk-item-couple {
     vertical-align: top;
-    width: 48%;
+    width: 60%;
     display: inline-block;
     h2 {
       margin: 0;
     }
+  }
+  img {
+    display: inline-block;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+
+}
+
+@media only screen and (max-width : $tablet) {
+
+  .risk-container-couple {
+    .risk-item-couple {
+      width: 100%;
+      display: inline-block;
+    }
     img {
       display: block;
-      width: 200px;
+      position: relative;
       margin: 0 auto;
+      margin-bottom: 20px;
     }
-    &:last-of-type {
-      padding-left: 3%;
-    }
+
   }
 
 }
@@ -404,7 +421,7 @@ a {
     .status-cell {
       padding: 10px 0;
       text-align: center;
-      width: 25%;
+      width: 20%;
       border-bottom: 1px solid $bg-gray;
       &.disease-head {
         border-bottom: 0;
@@ -412,7 +429,11 @@ a {
         margin-bottom: -20px;
       }
       p {
-        margin: 0;
+        margin: 6px 0 0 0;
+        line-height: 110%;
+        &.status-carrier-0 {
+          color: #CCCCCC;
+        }
         &.status-carrier-1 {
           font-weight: 600;
           color: #F5B16E;
@@ -423,14 +444,17 @@ a {
         }
       }
       img {
-        width: 30px;
+        width: 35px;
         margin-top: 10px;
       }
     }
     .disease-cell {
       padding: 10px 0;
-      width: 50%;
+      width: 56%;
       border-bottom: 1px solid $bg-gray;
+      .disease-name {
+        font-weight: 600;
+      }
       &.disease-head {
         border-bottom: 0;
         padding-bottom: 0;
@@ -438,6 +462,9 @@ a {
       }
       p {
         margin: 5px 0 5px 0;
+        &.residual {
+          font-weight: 400;
+        }
       }
     }
   }

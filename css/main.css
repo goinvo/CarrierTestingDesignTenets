@@ -248,16 +248,27 @@ a {
 
 .risk-container-couple .risk-item-couple {
   vertical-align: top;
-  width: 48%;
+  width: 60%;
   display: inline-block; }
   .risk-container-couple .risk-item-couple h2 {
     margin: 0; }
-  .risk-container-couple .risk-item-couple img {
+
+.risk-container-couple img {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  margin: 0; }
+
+@media only screen and (max-width: 760px) {
+  .risk-container-couple .risk-item-couple {
+    width: 100%;
+    display: inline-block; }
+  .risk-container-couple img {
     display: block;
-    width: 200px;
-    margin: 0 auto; }
-  .risk-container-couple .risk-item-couple:last-of-type {
-    padding-left: 3%; }
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px; } }
 
 .disease-list-couple {
   width: 100%; }
@@ -268,14 +279,17 @@ a {
     .disease-list-couple tr .status-cell {
       padding: 10px 0;
       text-align: center;
-      width: 25%;
+      width: 20%;
       border-bottom: 1px solid #E0E0E0; }
       .disease-list-couple tr .status-cell.disease-head {
         border-bottom: 0;
         padding-bottom: 0;
         margin-bottom: -20px; }
       .disease-list-couple tr .status-cell p {
-        margin: 0; }
+        margin: 6px 0 0 0;
+        line-height: 110%; }
+        .disease-list-couple tr .status-cell p.status-carrier-0 {
+          color: #CCCCCC; }
         .disease-list-couple tr .status-cell p.status-carrier-1 {
           font-weight: 600;
           color: #F5B16E; }
@@ -283,15 +297,19 @@ a {
           font-weight: 600;
           color: #FA8888; }
       .disease-list-couple tr .status-cell img {
-        width: 30px;
+        width: 35px;
         margin-top: 10px; }
     .disease-list-couple tr .disease-cell {
       padding: 10px 0;
-      width: 50%;
+      width: 56%;
       border-bottom: 1px solid #E0E0E0; }
+      .disease-list-couple tr .disease-cell .disease-name {
+        font-weight: 600; }
       .disease-list-couple tr .disease-cell.disease-head {
         border-bottom: 0;
         padding-bottom: 0;
         margin-bottom: -20px; }
       .disease-list-couple tr .disease-cell p {
         margin: 5px 0 5px 0; }
+        .disease-list-couple tr .disease-cell p.residual {
+          font-weight: 400; }
