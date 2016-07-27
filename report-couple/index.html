@@ -97,6 +97,14 @@
 						<div class="card-container {{^isOverallCarrier}}disease-container{{/isOverallCarrier}}">
 
 
+						{{^atRisk}}
+							<div class="research" id="header">
+								<p>
+									"Informative, clear, but not alarming"<span class="italic"> -5 patients</span>
+								</p>
+							</div>
+						{{/atRisk}}
+
 							<table class="disease-list-couple">
 								<tbody>
 										{{#diseases}}
@@ -174,13 +182,11 @@
 
 							<img src="/img/graph-noncarrier.png">
 
-
 								<div class="research" id="graph">
 									<p>
-										"This speaks to the patient and the way they think about results"
+										"This visual speaks to the patient and the way they think about results" <span class="italic">-clinician</span>
 									</p>
 								</div>
-
 
             </div>
 
@@ -202,6 +208,12 @@
 						</div>
 
 						<img src="/img/graph-carrier.png">
+
+						<div class="research" id="graph">
+							<p>
+								"This visual speaks to the patient and the way they think about results" <span class="italic">-clinician</span>
+							</p>
+						</div>
 
 					</div>
 

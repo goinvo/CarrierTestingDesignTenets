@@ -2,6 +2,7 @@ $primary-blue: #02A8A8;
 $secondary-blue: #5ACCCC;
 $bg-gray: #E0E0E0;
 $nonblack: #4A4A4A;
+$research-color: #FFECB8;
 $button-width: 200px;
 $button-height: 45px;
 
@@ -150,11 +151,11 @@ a {
 }
 
 .research-toggle {
-
   font-weight: 600;
   color: white;
   z-index: 15;
   margin: -44px 0 0 100px;
+  cursor: hand; cursor: pointer;
   .show-research {
     display:block;
   }
@@ -167,29 +168,37 @@ a {
     }
     .hide-research {
       display: block;
+      color: #FFECB8 !important;
     }
   }
 }
 
 
 .research {
-  background-color: rgba(212,212,212,0.7);
+  background-color: rgba(255,236,184,0.85);
+  // border: 1px solid $bg-gray;
   z-index: 3;
   position: absolute;
   display: none;
+  max-width: 200px;
   p {
     padding: 10px;
     margin: 0;
-    max-width: 200px;
     font-family: 'Sura', serif;
     font-size: .8em;
+    .italic {
+      font-style: italic;
+    }
   }
   &.research-on {
     display: block;
   }
   &#graph {
-    right: -40px;
-    margin-top: -30px;
+    right: 0;
+    margin-top: -20px;
+  }
+  &#header {
+    margin-top: -240px;
   }
 }
 
@@ -417,6 +426,8 @@ a {
     display: block;
     background-color: $primary-blue;
     border-radius: 0 0 20px 0px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
     color: white;
     z-index: 1;
     margin: -3px 0 0 0;
