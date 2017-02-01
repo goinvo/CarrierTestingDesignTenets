@@ -1,10 +1,13 @@
-$primary-blue: #02A8A8;
+$primary-blue: #45C0C1;
 $secondary-blue: #5ACCCC;
+$light-gray: #EEE;
 $bg-gray: #E0E0E0;
+$text-gray: #B7B7B7;
+$shadow-gray: #E5E5E5;
 $nonblack: #4A4A4A;
 $research-color: #FFECB8;
 $button-width: 200px;
-$button-height: 45px;
+$button-height: 37px;
 
 $tablet: 760px;
 $mob-tab: 560px;
@@ -12,65 +15,262 @@ $mobile: 480px;
 
 
 body {
+  height: 100%;
+  margin: 0;
   font-family: 'Hind', sans-serif;
   font-weight: 300;
   color: $nonblack;
-  margin: 0;
   background-color: white;
-  height: 100%;
   overflow-y: auto;
+}
+.lighter-line {
+  margin: 0;
+  opacity: 0.3;
+}
+
+// header
+
+#results-fixedheader-notcarrier {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  height: 66px;
+	width: 100%;
+  padding-top: 14px;
+	background-color: white;
+	box-shadow: 0px 0px 5px #ddd;
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+#results-fixedheader-carrier {
+  position: fixed;
+  z-index: 1;
+  display: none;
+  height: 66px;
+	width: 100%;
+	padding-top: 14px;
+	background-color: white;
+	box-shadow: 0px 0px 5px #ddd;
+  h2 {
+    margin-top: 18px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  div {
+    display: inline-block;
+    width: 130px;
+    margin-left: 20px;
+  }
 }
 
 
 // Individual Report
 
 .container {
-  margin: 0 auto;
-  background-color: white;
-  padding: 30px 0;
   position: relative;
+  margin: 0 auto;
+  padding: 30px 0px 80px;
+  background-color: #FAFAFA;
   .content-container {
     position: relative;
-    width: 80%;
-    max-width: 700px;
-    margin: 0 auto;
     .content {
-      border-top: 1px solid $bg-gray;
-      width: 100%;
-      padding: 20px 0 20px 0;
+			width: 100%;
+			margin-top: 48px;
+			background-color: white;
+			border: 0.5px solid $light-gray;
+			box-shadow: 1.3px 1.4px 2px $shadow-gray;
       &.noline {
         border-top: 0;
       }
       .content-item {
-        width: 60%;
         display: inline-block;
+        width: 55%;
         vertical-align: top;
+				padding-left: 22px;
       }
     }
   }
 }
+.container-white {
+	background-color: white;
+	padding: 70px 8% 53px 8%;
+	border-bottom: 1px solid #E8E7E7;
+}
+.container-gray {
+	width: 80%;
+	max-width: 700px;
+	margin: auto;
+	margin-top: 50px;
+}
+.result-graphics-spacing {
+	float: left;
+  width: 30%;
+	margin-right: 1.5%;
+  margin-left: 1.5%;
+	img {
+		width: 100%;
+	}
+	.result-graphics-text {
+		 text-align: center;
+		 margin-top: 0.5rem;
+	}
+}
+.noncarrier-result {
+	max-width: 700px;
+  margin: auto;
+	margin-top: 48px;
+}
+.carrier-result {
+	height: 247px;
+	max-width: 700px;
+	padding-top: 16px;
+  margin: auto;
+	div {
+		float: left;
+	}
+	h2 {
+		text-align: center;
+	}
+	div:nth-child(1), div:nth-child(3), div:nth-child(5) {
+		width: 28%;
+		img {
+			width: 100%;
+		}
+	}
+	div:nth-child(2) {
+		width: 7%;
+		img {
+			width: 70%;
+			margin: 109% 0% 0% 36%;
+		}
+	}
+	div:nth-child(4) {
+		width: 7%;
+		img {
+			width: 70%;
+			margin: 125% 0% 0% 45%;
+		}
+	}
+}
+#individual-pie-section {
+	text-align: center;
+	#individual-noncarrier-pie {
+    float: left;
+    width: 46%;
+		height: 430px;
+		margin-top: 0;
+	}
+	#individual-carrier-pie {
+    display: inline-block;
+    width: 46%;
+    height: 430px;
+		margin-left: 7.3%;
+    margin-top: 0;
+	}
+	.individual-pie-content {
+		margin-left: 7%;
+		margin-right: 3%;
+		h2 {
+			font-weight: 500;
+			font-size: 13px;
+			opacity: 0.6;
+		}
+		p {
+			text-align: left;
+		}
+		span {
+			font-weight: 700;
+		}
+		img {
+			margin-right: 2%;
+		}
+	}
+}
+.disease-header {
+	margin: auto;
+ 	h2:nth-child(1) {
+	 display: inline-block;
+	 width: 14%;
+	 margin-left: 29px;
+ 	}
+ 	h2:nth-child(2) {
+	 display: inline-block;
+	 width: 64%;
+   text-align: center;
+ 	}
+ 	h2:nth-child(3) {
+	 display: inline-block;
+	 width: 13%;
+   text-align: center;
+	}
+}
+#disease-list-individual {
+  div:first-of-type {
+    float: left;
+    width: 11.5%;
+    margin-left: 4%;
+    h2 {
+      width: 100px;
+      margin-top: 15px;
+    }
+    img {
+      margin-left: 14px;
+    }
+  }
+  div:last-of-type {
+    width: 100px;
+    right: 2.5%;
+    div {
+      width: 100%;
+      p {
+        margin-bottom: 0;
+      }
+      img {
+        margin-left: 45px;
+      }
+    }
+  }
+}
+#partners-test-button {
+  width: 200px;
+  padding: 6px 10px;
+  margin: auto;
+  margin-top: 8px;
+  border-radius: 2px;
+  background-color: #34B5B6;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.unlikely-carrier-margin {
+  margin-left: 22px;
+}
+
 
 /* Font treatments (keep < 6)*/
 
 h1 {
+  margin-bottom: 10px;
+  margin-top: 15px;
   font-size: 2.5em;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 0;
-  margin-top: 60px;
   line-height: 140%;
 }
 
 h2 {
+  margin-top: 20px;
   font-size: 1em;
   text-align: left;
   font-weight: 600;
-  margin-top: 28px;
 }
 .subheader {
-  text-align: center;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 p {
@@ -109,13 +309,13 @@ a {
 }
 
 .back-button {
-  background-color: $bg-gray;
-  height: 23px;
-  border: 1px solid $nonblack;
-  border-radius: 0 5px 5px 0 ;
   position: fixed;
-  margin: -15px 0 0 15px;
   z-index: 15;
+  height: 23px;
+  margin: -15px 0 0 15px;
+  border: 1px solid $nonblack;
+  border-radius: 0 5px 5px 0;
+  background-color: $bg-gray;
   &:hover {
     background-color: $nonblack;
   }
@@ -139,22 +339,22 @@ a {
 
 .careteam {
   position: fixed;
-  top: 0;
-  margin-top: 0;
-  right: 25px;
-  background-color: transparent;
-  border: 0;
-  height: 43px;
   z-index: 10;
+  top: 0;
+  right: 25px;
+  height: 43px;
+  margin-top: 0;
+  border: 0;
+  background-color: transparent;
   font-weight: 600;
   color: white;
 }
 
 .research-toggle {
-  font-weight: 600;
-  color: white;
   z-index: 15;
   margin: -44px 0 0 100px;
+  font-weight: 600;
+  color: white;
   cursor: hand; cursor: pointer;
   .show-research {
     display:block;
@@ -168,20 +368,19 @@ a {
     }
     .hide-research {
       display: block;
-      color: #FFECB8 !important;
+      color: #f5dc99 !important;
     }
   }
 }
 
 
 .research {
-  background-color: rgba(255,236,184,0.85);
-  // border: 1px solid $bg-gray;
-  z-index: 3;
   position: absolute;
+  z-index: 3;
   display: none;
   max-width: 200px;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255,236,184,0.85);
   p {
     padding: 10px;
     margin: 0;
@@ -195,11 +394,12 @@ a {
     display: block;
   }
   &#graph {
+    top: 15%;
     right: 0;
-    margin-top: -20px;
   }
   &#header {
-    margin-top: -180px;
+    top: 15%;
+    right: 0;
   }
   &#carrier {
     margin-top: -30px;
@@ -208,11 +408,16 @@ a {
     right: 0;
     margin-top: -150px;
   }
+  &#partner {
+    right: 0;
+    top: 12%;
+  }
   &#contact {
     right: 0;
-    margin-top: -120px;
+    bottom: 28%;
   }
   &#language {
+    right: 0;
     margin-top: -60px;
   }
   &#partner-test {
@@ -228,22 +433,23 @@ a {
   }
   &#diplomatic {
     right: 0;
-    margin-top: -60px;
+    bottom: 53%;
   }
   &#sensitive {
-    margin-top: -30px;
+    right: 0;
+    bottom: 53%;
   }
   &#send {
     right: 0;
-    margin-top: -100px;
+    bottom: 21%;
   }
   &#reminder {
+    right: 0;
     margin-top: -300px;
-    margin-left: calc(50% - 100px);
   }
   &#comparison {
+    right: 0;
     margin-top: -150px;
-    margin-left: calc(50% - 100px);
   }
 }
 
@@ -251,13 +457,12 @@ a {
 
 
 .contact-button-container {
-  height: 55px;
-  margin-bottom: 20px;
-  // z-index: 15;
-  width: 200px;
   position: absolute;
   right:0;
   display: inline-block;
+  height: 55px;
+  width: 200px;
+  margin-bottom: 20px;
 }
 
 .contact {
@@ -284,33 +489,37 @@ a {
 
 /* Graphic Elements*/
 .disease-container {
-  border: 1px solid $bg-gray;
-  height: 400px;
+	height: 100%;
+  border: 1px solid $light-gray;
+	box-shadow: 1.3px 1.4px 2px $shadow-gray;
   overflow: auto;
+	background-color: white;
 }
 .card-container {
-  border: 1px solid $bg-gray;
-  border-radius: 5px;
   width: 100%;
+  border: 1px solid $light-gray;
+  border-radius: 5px;
+  box-shadow: 1.3px 1.4px 2px $shadow-gray;
+  background-color: white;
 }
 
 .disease-list {
-  list-style: none;
-  margin: 0;
   padding-left: 0;
+  margin: 0;
+  list-style: none;
   li {
     position: relative;
     border-bottom: 1px solid $bg-gray;
     .card-item {
+      display: inline-block;
+      width: 72%;
       padding-top: 15px;
       padding-bottom: 15px;
-      display: inline-block;
-      width: 73%;
+			margin-left: 20px;
       &.item-carrier {
-        width: 80%;
+        width: 75%;
       }
       p, a {
-        margin-left: 20px;
         margin-right: 20px;
         margin-bottom: 0;
         margin-top:0;
@@ -320,11 +529,7 @@ a {
       display: inline-block;
       position: absolute;
       right: 20px;
-      background: $bg-gray;
-      border-radius: 20px;
-      height: 30px;
-      margin-top:17px;
-      vertical-align: top;
+      margin-top:12px;
       &.tag-carrier {
         width: 70px;
       }
@@ -334,6 +539,9 @@ a {
       p {
         margin-top: 5px;
         text-align: center;
+				color: $text-gray;
+				letter-spacing: 0.05rem;
+				font-weight: 500;
       }
     }
     &:last-child {
@@ -378,20 +586,36 @@ a {
 
 
 .button {
-  border-radius: 5px;
-  width: $button-width;
+  float: right;
+	display: inline-block;
+	width: $button-width;
   height: $button-height;
-  background-color: $primary-blue;
-  position: absolute;
-  right:0;
-  margin-top: 28px;
-  display: inline-block;
+  margin: 24px 4% 6% 0;
+	border: 2.5px solid $primary-blue;
+	border-radius: 2px;
   p {
     text-align: center;
-    color:white;
-    padding-top:10px;
-    font-style: normal;
+    padding-top: 7px;
     margin: 0;
+		color: $primary-blue;
+		font-weight: 500;
+		letter-spacing: 1px;
+  }
+}
+.button-action-plan {
+	width: $button-width;
+  height: $button-height;
+  margin: auto;
+	border: 2.5px solid $primary-blue;
+	border-radius: 2px;
+  background-color: $primary-blue;
+  p {
+    text-align: center;
+    padding-top: 7px;
+    margin: 0;
+		color: white;
+		font-weight: 500;
+		letter-spacing: 1px;
   }
 }
 
@@ -406,13 +630,8 @@ a {
 
 @media only screen and (max-width : $mobile) {
 
-  .container {
-    .content-container {
-      width: 90%;
-    }
-  }
-
 }
+
 
 @media only screen and (max-width : $mob-tab) {
 
@@ -428,7 +647,7 @@ a {
   .disease-list {
     li {
       .card-item {
-        width: 78%;
+        width: 69%;
       }
       .status-tag {
         &.tag-noncarrier {
@@ -437,11 +656,16 @@ a {
           border-radius: 5px;
         }
         &.item-carrier {
-          width: 75%;
+          width: 69%;
         }
       }
     }
   }
+
+	#couple-header {
+		padding-top: 9px;
+		font-size: 13px;
+	}
 
 }
 
@@ -452,7 +676,7 @@ a {
       .content {
         padding: 10px 0 20px 0;
         .content-item {
-          width: 100%;
+          width: 90%;
         }
       }
     }
@@ -460,11 +684,8 @@ a {
 
   .button {
     position: static;
-    margin: 0 0 10px 0;
-  }
-  .contact-button-container {
-    position: static;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 23px;
+		float: none;
   }
 
   .research-toggle {
@@ -499,11 +720,58 @@ a {
     }
   }
 
+	#individual-pie-section {
+		#individual-noncarrier-pie {
+			width: 100%;
+			height: 405px;
+		}
+		#individual-carrier-pie {
+			width: 100%;
+			margin-top: 48px;
+			margin-left: 0%;
+			height: 405px;
+		}
+	}
+
+	.disease-header {
+		margin: auto;
+	 	h2:nth-child(1) {
+		 display: inline-block;
+		 width: 14%;
+		 margin-left: 20px;
+	 	}
+	 	h2:nth-child(2) {
+		 text-align: left;
+		 display: inline-block;
+		 width: 62%;
+	 	}
+	 	h2:nth-child(3) {
+		 text-align: center;
+		 display: inline-block;
+		 width: 13%;
+		}
+	}
+
 }
 
 
 // Couple Report
 
+.results-fixedheader-couple {
+	display: none;
+	background-color: white;
+	box-shadow: 0px 0px 5px #ddd;
+	height: 66px;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	padding-top: 14px;
+  h2 {
+    margin-top: 27px;
+    text-align: center;
+    font-size: 14px;
+  }
+}
 .risk-container-couple {
   .risk-item-couple {
     vertical-align: top;
@@ -519,7 +787,10 @@ a {
     position: absolute;
     right: 0;
   }
-
+}
+.results-container-couple {
+  max-width: 655px;
+  margin: auto;
 }
 
 @media only screen and (max-width : $tablet) {
@@ -563,8 +834,9 @@ a {
           color: #CCCCCC;
         }
         &.status-carrier-1 {
-          font-weight: 600;
-          color: #F5B16E;
+          letter-spacing: 0.5px;
+          font-weight: 400;
+          color: #919191;
         }
         &.status-carrier-2 {
           font-weight: 600;
@@ -573,7 +845,6 @@ a {
       }
       img {
         width: 35px;
-        margin-top: 10px;
       }
     }
     .disease-cell {

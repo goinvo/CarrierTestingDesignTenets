@@ -39,6 +39,8 @@ $( document ).ready(function() {
           }
         });
 
+        console.log(risks);
+
         return risks;
       }
 
@@ -73,6 +75,37 @@ $( document ).ready(function() {
         return diseases;
       }
 
+			/// carrier result dropdown after vertical scroll
+      var windowWidth = $(window).width();
+      var top = 0;
+			$(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if (y > 20) {
+          $(".results-fixedheader-couple").slideDown();
+          if (windowWidth < 761 && top == 0) {
+            $(".research-toggle").animate({'margin-top': "68px"}, 400);
+            $(".research-toggle").css('background-color', "white");
+            $(".research-toggle").css('color', "#4D4D4D");
+            $(".research-toggle").css('box-shadow', "0px 0px 3px #ddd");
+            $(".fixedheader-couple-text").css('font-size', "12px");
+
+            $(".button-action-plan").css('width', '103px');
+            $(".button-action-plan").css('height', '18px');
+            $(".fixedheader-couple-button").css('padding-top', '0px');
+            top = 1;
+          }
+				} else {
+					$(".results-fixedheader-couple").slideUp();
+          if (windowWidth < 761 && top == 1) {
+            $(".research-toggle").animate({"margin-top": "-3px"}, 400);
+            $(".research-toggle").css('background-color', "#45C0C1");
+            $(".research-toggle").css('color', "white");
+            $(".research-toggle").css('box-shadow', "0px 0px 0px");
+            top = 0;
+          }
+				}
+			})
+
       var risks = riskStatus(couple);
 
       if (risks.both) {
@@ -95,7 +128,26 @@ $( document ).ready(function() {
       var template = $('#carrier-template').html();
       var html = Mustache.to_html(template, couple);
       $('#results').html(html);
-      // $('.disease-count').html(data.patient[0].diseases.length);
+
+      // if both are carriers for the same disease, the cell changes it's CSS to reflect that difference
+      var tbodies = $("tbody tr");
+      if (tbodies.length < 4) {
+        for (i = 0; i < $("tbody tr").length; i++) {
+          var currentTbody = tbodies.eq(i);
+          for (i = 0; i < currentTbody.length; i++) {
+            var resultOne = currentTbody.find("td p").eq(0).attr("class");
+            var resultTwo = currentTbody.find("td p").eq(3).attr("class");
+            if (resultOne == resultTwo) {
+              currentTbody.css("background-color", "#FEFAF8");
+              currentTbody.find("td p").eq(0).css("color", "#EEAC89");
+              currentTbody.find("td p").eq(3).css("color", "#EEAC89");
+              currentTbody.find("td p img").eq(0).attr("src", "/img/carrier-4.png");
+              currentTbody.find("td p img").eq(1).attr("src", "/img/carrier-4.png");
+            }
+          }
+        }
+      }
+
 
     });
 

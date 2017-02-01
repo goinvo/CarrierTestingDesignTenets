@@ -37,11 +37,11 @@
   },
   {
     "patient1" : "Caroline",
-    "patient2" : "the donor",
+    "patient2" : "The donor",
     "diseases" : [
       {
-        "patient1IsCarrier": false,
-        "patient2IsCarrier": true,
+        "patient1IsCarrier": true,
+        "patient2IsCarrier": false,
         "name": "Cystic Fibrosis",
         "description": "Characterized by impaired lung and digestive function due to thick, sticky mucus. The disease typically worsens over time and currently has no cure.",
         "residual": "0.0007%"
@@ -82,7 +82,7 @@
     "diseases" : [
       {
         "patient1IsCarrier": false,
-        "patient2IsCarrier": false,
+        "patient2IsCarrier": true,
         "name": "Cystic Fibrosis",
         "description": "Characterized by impaired lung and digestive function due to thick, sticky mucus. The disease typically worsens over time and currently has no cure."
       },
@@ -101,7 +101,7 @@
         "residual": "0.0005%"
       },
       {
-        "patient1IsCarrier": true,
+        "patient1IsCarrier": false,
         "patient2IsCarrier": false,
         "name": "Maple Syrup Urine Disease",
         "description": "Sweet smelling urine, poor feeding, vomiting, lack of energy, and developmental delay.",
@@ -109,7 +109,7 @@
       },
       {
         "patient1IsCarrier": false,
-        "patient2IsCarrier": true,
+        "patient2IsCarrier": false,
         "name": "Tay-Sachs Disease",
         "description": "Loss of motor skills, seizures, vision and hearling loss, intellectual disability, and/or paralysis"
       }

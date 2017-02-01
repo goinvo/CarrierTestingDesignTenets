@@ -1,0 +1,405 @@
+body {
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  color: #4A4A4A;
+  margin: 0;
+  background-color: white;
+  height: 100%;
+  overflow-y: auto; }
+
+.container {
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px 0;
+  position: relative; }
+  .container .content-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto; }
+    .container .content-container .content {
+      border-top: 1px solid #E0E0E0;
+      width: 100%;
+      padding: 20px 0 20px 0; }
+      .container .content-container .content.noline {
+        border-top: 0; }
+      .container .content-container .content .content-item {
+        width: 60%;
+        display: inline-block;
+        vertical-align: top; }
+
+/* Font treatments (keep < 6)*/
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 60px;
+  line-height: 140%; }
+
+h2 {
+  font-size: 1em;
+  text-align: left;
+  font-weight: 600;
+  margin-top: 28px; }
+
+.subheader {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 30px; }
+
+p {
+  font-size: 1em; }
+
+a {
+  color: #02A8A8;
+  text-decoration: none; }
+
+/* contact info */
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 55px;
+  width: 100%;
+  transition: background-color .2s;
+  z-index: 5; }
+  .header .header-title {
+    opacity: 0; }
+  .header.fix-contact {
+    background-color: #5ACCCC;
+    box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.1); }
+    .header.fix-contact .header-title {
+      text-align: center;
+      color: white;
+      opacity: 1; }
+
+.back-button {
+  background-color: #E0E0E0;
+  height: 23px;
+  border: 1px solid #4A4A4A;
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+  margin: -15px 0 0 15px;
+  z-index: 15; }
+  .back-button:hover {
+    background-color: #4A4A4A; }
+  .back-button p {
+    margin: 0;
+    text-align: center;
+    color: #4A4A4A; }
+    .back-button p:hover {
+      color: white; }
+  .back-button.fix-contact {
+    border: 0;
+    background: transparent; }
+    .back-button.fix-contact p {
+      color: white;
+      font-weight: 600; }
+
+.careteam {
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  right: 25px;
+  background-color: transparent;
+  border: 0;
+  height: 43px;
+  z-index: 10;
+  font-weight: 600;
+  color: white; }
+
+.research-toggle {
+  font-weight: 600;
+  color: white;
+  z-index: 15;
+  margin: -44px 0 0 100px;
+  cursor: hand;
+  cursor: pointer; }
+  .research-toggle .show-research {
+    display: block; }
+  .research-toggle .hide-research {
+    display: none; }
+  .research-toggle.research-on .show-research {
+    display: none; }
+  .research-toggle.research-on .hide-research {
+    display: block;
+    color: #FFECB8 !important; }
+
+.research {
+  background-color: rgba(255, 236, 184, 0.85);
+  z-index: 3;
+  position: absolute;
+  display: none;
+  max-width: 200px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1); }
+  .research p {
+    padding: 10px;
+    margin: 0;
+    font-family: 'Sura', serif;
+    font-size: .8em; }
+    .research p .italic {
+      font-style: italic; }
+  .research.research-on {
+    display: block; }
+  .research#graph {
+    right: 0;
+    margin-top: -20px; }
+  .research#header {
+    margin-top: -180px; }
+  .research#carrier {
+    margin-top: -30px; }
+  .research#info {
+    right: 0;
+    margin-top: -150px; }
+  .research#contact {
+    right: 0;
+    margin-top: -120px; }
+  .research#language {
+    margin-top: -60px; }
+  .research#partner-test {
+    margin-top: -380px; }
+  .research#understand {
+    right: 0;
+    margin-top: -30px; }
+  .research#desire {
+    right: 0;
+    margin-top: -200px; }
+  .research#diplomatic {
+    right: 0;
+    margin-top: -60px; }
+  .research#sensitive {
+    margin-top: -30px; }
+  .research#send {
+    right: 0;
+    margin-top: -100px; }
+  .research#reminder {
+    margin-top: -300px;
+    margin-left: calc(50% - 100px); }
+  .research#comparison {
+    margin-top: -150px;
+    margin-left: calc(50% - 100px); }
+
+.contact-button-container {
+  height: 55px;
+  margin-bottom: 20px;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  display: inline-block; }
+
+.contact {
+  transition: background-color .2s;
+  display: inline-block; }
+
+/* Graphic Elements*/
+.disease-container {
+  border: 1px solid #E0E0E0;
+  height: 400px;
+  overflow: auto; }
+
+.card-container {
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  width: 100%; }
+
+.disease-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0; }
+  .disease-list li {
+    position: relative;
+    border-bottom: 1px solid #E0E0E0; }
+    .disease-list li .card-item {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: inline-block;
+      width: 73%; }
+      .disease-list li .card-item.item-carrier {
+        width: 80%; }
+      .disease-list li .card-item p, .disease-list li .card-item a {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 0;
+        margin-top: 0; }
+    .disease-list li .status-tag {
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      background: #E0E0E0;
+      border-radius: 20px;
+      height: 30px;
+      margin-top: 17px;
+      vertical-align: top; }
+      .disease-list li .status-tag.tag-carrier {
+        width: 70px; }
+      .disease-list li .status-tag.tag-noncarrier {
+        width: 120px; }
+      .disease-list li .status-tag p {
+        margin-top: 5px;
+        text-align: center; }
+    .disease-list li:last-child {
+      border-bottom: 0; }
+
+.risk-container td {
+  padding: 0 20px;
+  width: 49%;
+  vertical-align: top;
+  margin: 0 auto;
+  text-align: center; }
+  .risk-container td h2 {
+    margin-bottom: 0;
+    margin-top: 13px;
+    text-align: left; }
+  .risk-container td p {
+    margin-top: 0;
+    text-align: left; }
+  .risk-container td:nth-child(odd) {
+    border-right: 1px solid #E0E0E0; }
+  .risk-container td .graph {
+    width: 180px;
+    height: auto;
+    margin: auto; }
+
+.bullet-list {
+  padding-left: 18px; }
+
+.button {
+  border-radius: 5px;
+  width: 200px;
+  height: 45px;
+  background-color: #02A8A8;
+  position: absolute;
+  right: 0;
+  margin-top: 28px;
+  display: inline-block; }
+  .button p {
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    font-style: normal;
+    margin: 0; }
+
+.line {
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+  height: 15px; }
+
+@media only screen and (max-width: 480px) {
+  .container .content-container {
+    width: 90%; } }
+@media only screen and (max-width: 560px) {
+  .risk-container td {
+    padding: 0 8px; }
+    .risk-container td .graph {
+      width: 100%; }
+
+  .disease-list li .card-item {
+    width: 78%; }
+  .disease-list li .status-tag.tag-noncarrier {
+    width: 70px;
+    height: 60px;
+    border-radius: 5px; }
+  .disease-list li .status-tag.item-carrier {
+    width: 75%; } }
+@media only screen and (max-width: 760px) {
+  .container .content-container .content {
+    padding: 10px 0 20px 0; }
+    .container .content-container .content .content-item {
+      width: 100%; }
+
+  .button {
+    position: static;
+    margin: 0 0 10px 0; }
+
+  .contact-button-container {
+    position: static;
+    margin: 0 0 10px 0; }
+
+  .research-toggle {
+    display: block;
+    background-color: #02A8A8;
+    border-radius: 0 0 20px 0px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    color: white;
+    z-index: 1;
+    margin: -3px 0 0 0;
+    width: 125px;
+    height: 35px;
+    text-align: center; }
+    .research-toggle p {
+      margin: 0;
+      padding-top: 5px; }
+    .research-toggle .show-research {
+      display: block; }
+    .research-toggle .hide-research {
+      display: none; }
+    .research-toggle.research-on .show-research {
+      display: none; }
+    .research-toggle.research-on .hide-research {
+      display: block; } }
+.risk-container-couple .risk-item-couple {
+  vertical-align: top;
+  width: 60%;
+  display: inline-block; }
+  .risk-container-couple .risk-item-couple h2 {
+    margin: 0; }
+.risk-container-couple img {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  right: 0; }
+
+@media only screen and (max-width: 760px) {
+  .risk-container-couple .risk-item-couple {
+    width: 100%;
+    display: block; }
+  .risk-container-couple img {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px; } }
+.disease-list-couple {
+  width: 100%; }
+  .disease-list-couple tr {
+    vertical-align: top; }
+    .disease-list-couple tr:last-of-type td {
+      border-bottom: 0; }
+    .disease-list-couple tr .status-cell {
+      padding: 10px 0;
+      text-align: center;
+      width: 20%;
+      border-bottom: 1px solid #E0E0E0; }
+      .disease-list-couple tr .status-cell.disease-head {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: -20px; }
+      .disease-list-couple tr .status-cell p {
+        margin: 6px 0 0 0;
+        line-height: 110%; }
+        .disease-list-couple tr .status-cell p.status-carrier-0 {
+          color: #CCCCCC; }
+        .disease-list-couple tr .status-cell p.status-carrier-1 {
+          font-weight: 600;
+          color: #F5B16E; }
+        .disease-list-couple tr .status-cell p.status-carrier-2 {
+          font-weight: 600;
+          color: #FA8888; }
+      .disease-list-couple tr .status-cell img {
+        width: 35px;
+        margin-top: 10px; }
+    .disease-list-couple tr .disease-cell {
+      padding: 10px 0;
+      width: 56%;
+      border-bottom: 1px solid #E0E0E0; }
+      .disease-list-couple tr .disease-cell .disease-name {
+        font-weight: 600; }
+      .disease-list-couple tr .disease-cell.disease-head {
+        border-bottom: 0;
+        padding-bottom: 0;
+        margin-bottom: -20px; }
+      .disease-list-couple tr .disease-cell p {
+        margin: 5px 0 5px 0; }
+
+/*# sourceMappingURL=main.css.map */

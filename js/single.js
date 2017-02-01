@@ -43,47 +43,46 @@ $( document ).ready(function() {
       var html = Mustache.to_html(template, patient);
       $('#results').html(html);
       $('.disease-count').html(patient.diseases.length);
-      //
-      // var $window = $(window),
-      //     $header = $('.header'),
-      //     $backButton = $('.back-button'),
-      //     $contactButton = $('#contact-button'),
-      //     $contactButtonContainer = $('#contact-button-container');
-      //
-      // $window.scroll(function(e) {
-      //
-      //   if ($window.scrollTop() >= $contactButtonContainer.offset().top - 7) {
-      //     $contactButton.addClass("fix-contact");
-      //     $header.addClass('fix-contact');
-      //     $backButton.addClass('fix-contact');
-      //   } else {
-      //     $contactButton.removeClass("fix-contact");
-      //     $header.removeClass('fix-contact');
-      //     $backButton.removeClass('fix-contact');
-      //   }
-      //
-      // });
-      //
-      // // media query event handler
-      // if (matchMedia) {
-      //   var mq = window.matchMedia("(min-width: 560px)");
-      //   mq.addListener(WidthChange);
-      //   WidthChange(mq);
-      // }
-      //
-      // // media query change
-      // function WidthChange(mq) {
-      //   if (mq.matches) {
-      //     $contactButton.removeClass("fix-contact");
-      //     $header.removeClass('fix-contact');
-      //     $backButton.removeClass('fix-contact');
-      //   } else {
-      //     $contactButton.addClass("fix-contact");
-      //     $header.addClass('fix-contact');
-      //     $backButton.addClass('fix-contact');
-      //   }
-      //
-      // }
+
+      // carrier result dropdown after vertical scroll
+      var windowWidth = $(window).width();
+      var top = 0;
+			$(document).scroll(function() {
+				var y = $(this).scrollTop();
+				if (y > 20) {
+          $("#results-fixedheader-notcarrier").slideDown();
+          $("#results-fixedheader-carrier").slideDown();
+          if (windowWidth < 761 && top == 0) {
+            $(".research-toggle").animate({'margin-top': "68px"}, 400);
+            $(".research-toggle").css('background-color', "white");
+            $(".research-toggle").css('color', "#4D4D4D");
+            $(".research-toggle").css('box-shadow', "0px 0px 3px #ddd");
+            top = 1;
+          }
+				} else {
+					$("#results-fixedheader-notcarrier").slideUp();
+          $("#results-fixedheader-carrier").slideUp();
+          if (windowWidth < 761 && top == 1) {
+            $(".research-toggle").animate({"margin-top": "-3px"}, 400);
+            $(".research-toggle").css('background-color', "#45C0C1");
+            $(".research-toggle").css('color', "white");
+            $(".research-toggle").css('box-shadow', "0px 0px 0px");
+            top = 0;
+          }
+				}
+			})
+
+			// vertical align disease status tag depending on size of window
+			var windowWidth = $(window).width();
+			if (windowWidth < 561) {
+				var cardItems = $(".card-item");
+				for (var i = 0; i < cardItems.length; i++) {
+					var cardItemsHeight = $(".card-item").height();
+					if (cardItems.eq(i).height() < 50) {
+						$(".tag-noncarrier").eq(i).css("margin-top", "0px");
+					}
+				}
+			}
 
     });
 
