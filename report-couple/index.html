@@ -63,26 +63,35 @@
 
 						{{#riskStatus1}}
 							<div class="fix-contact results-fixedheader-couple">
-								<h2 class="fixedheader-couple-text">Your children are unlikely to inherit any of the diseases we tested</h2>
+								<div class="fixedheader-container">
+									<h2 class="fixedheader-couple-text">Your children are unlikely to inherit any of the diseases we tested</h2>
+								</div>
 							</div>
 						{{/riskStatus1}}
 
             {{#riskStatus2}}
 							<div class="fix-contact results-fixedheader-couple">
-								<h2>Your children are unlikely to inherit any of the diseases we tested</h2>
+								<div class="fixedheader-container">
+									<h2>Your children are unlikely to inherit any of the diseases we tested</h2>
+								</div>
 							</div>
 						{{/riskStatus2}}
 
             {{#riskStatus3}}
 							<div class="fix-contact results-fixedheader-couple">
-								<h2>Your children are unlikely to inherit any of the diseases we tested</h2>
+								<div class="fixedheader-container">
+									<h2>Your children are unlikely to inherit any of the diseases we tested</h2>
+								</div>
 							</div>
 						{{/riskStatus3}}
 
             {{#riskStatus4}}
-							<div class="fix-contact results-fixedheader-couple">
-								<h2 style="margin-top:18px;">Your children have a 25% chance of inheriting {{diseasePositive}}<span><a href="#"><div class="button-action-plan" style="display:inline-block; width:127px; margin-left:28px;"><p>Action Plan</p></div>
-                </a></span></h2>
+							<div class="fix-contact results-fixedheader-couple withbutton">
+								<div class="fixedheader-container">
+									<h2>Your children have a 25% chance of inheriting {{diseasePositive}}</h2>
+									<span><a href="#"><div class="button-action-plan" style="width:127px"><p>Action Plan</p></div>
+                </a></span>
+								</div>
 							</div>
 						{{/riskStatus4}}
 
@@ -260,7 +269,7 @@
 							</table>
 							<hr class="lighter-line"></hr>
 
-							<table class="disease-list-couple">
+							<table class="disease-list-couple" border="0" cellpadding="0" cellspacing="0">
 								<tbody>
 										{{#diseases}}
 											<tr>

@@ -40,8 +40,9 @@ body {
 	background-color: white;
 	box-shadow: 0px 0px 5px #ddd;
   h2 {
-    font-size: 1.5rem;
-    text-align: center;
+  font-size: 1rem;
+  margin-top: 27px;
+  text-align: center;
   }
 }
 #results-fixedheader-carrier {
@@ -53,16 +54,41 @@ body {
 	padding-top: 14px;
 	background-color: white;
 	box-shadow: 0px 0px 5px #ddd;
-  h2 {
-    margin-top: 18px;
+  .fixedheader-container {
+    max-width: 700px;
+    width: 80%;
+    margin: auto;
+    h2 {
+    margin-top: 27px;
     font-size: 1rem;
     text-align: center;
-  }
-  div {
+    }
+    div {
     display: inline-block;
     width: 130px;
     margin-left: 20px;
+    }
+    &.withbutton {
+      h2 {
+        text-align: left;
+        display: inline-block;
+      }
+      .button-action-plan {
+        display: inline-block;
+        float: right;
+        margin-top: 18px;
+      }
+    }
   }
+  @media only screen and (max-width : 768px) {
+    .fixedheader-container {
+      width: 92%;
+      .button-action-plan {
+      width: 105px;
+      }
+    }
+  }
+
 }
 
 
@@ -103,6 +129,11 @@ body {
 	max-width: 700px;
 	margin: auto;
 	margin-top: 50px;
+}
+@media only screen and (max-width : 768px) {
+  .container-gray {
+  	width: 92%;
+  }
 }
 .result-graphics-spacing {
 	float: left;
@@ -766,10 +797,26 @@ a {
 	z-index: 1;
 	width: 100%;
 	padding-top: 14px;
-  h2 {
-    margin-top: 27px;
-    text-align: center;
-    font-size: 14px;
+  .fixedheader-container {
+    max-width: 700px;
+    width: 80%;
+    margin: auto;
+    h2 {
+      margin-top: 27px;
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  &.withbutton {
+    h2 {
+      text-align: left;
+      display: inline-block;
+    }
+    .button-action-plan {
+      display: inline-block;
+      float: right;
+      margin-top: 18px;
+    }
   }
 }
 .risk-container-couple {
@@ -821,7 +868,7 @@ a {
       padding: 10px 0;
       text-align: center;
       width: 20%;
-      border-bottom: 1px solid $bg-gray;
+      border: 0,0,1px,0 solid $bg-gray;
       &.disease-head {
         border-bottom: 0;
         padding-bottom: 0;
