@@ -589,6 +589,11 @@ a {
     display: inline-block;
     float: right;
     margin-top: 18px; }
+  @media only screen and (max-width: 768px) {
+    .results-fixedheader-couple .fixedheader-container {
+      width: 92%; }
+      .results-fixedheader-couple .fixedheader-container .button-action-plan {
+        width: 105px; } }
 
 .risk-container-couple .risk-item-couple {
   vertical-align: top;

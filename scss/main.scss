@@ -818,6 +818,14 @@ a {
       margin-top: 18px;
     }
   }
+  @media only screen and (max-width : 768px) {
+    .fixedheader-container {
+      width: 92%;
+      .button-action-plan {
+      width: 105px;
+      }
+    }
+  }
 }
 .risk-container-couple {
   .risk-item-couple {
