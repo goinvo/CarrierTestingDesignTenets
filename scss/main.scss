@@ -659,11 +659,6 @@ a {
 
 
 
-@media only screen and (max-width : $mobile) {
-
-}
-
-
 @media only screen and (max-width : $mob-tab) {
 
   .risk-container {
@@ -792,7 +787,7 @@ a {
 	display: none;
 	background-color: white;
 	box-shadow: 0px 0px 5px #ddd;
-	height: 66px;
+	// height: 66px;
 	position: fixed;
 	z-index: 1;
 	width: 100%;
@@ -811,6 +806,7 @@ a {
     h2 {
       text-align: left;
       display: inline-block;
+      max-width: 75%;
     }
     .button-action-plan {
       display: inline-block;
@@ -818,15 +814,25 @@ a {
       margin-top: 18px;
     }
   }
+}
   @media only screen and (max-width : 768px) {
-    .fixedheader-container {
-      width: 92%;
-      .button-action-plan {
-      width: 105px;
+    .results-fixedheader-couple {
+      .fixedheader-container {
+        width: 92%;
+        .button-action-plan {
+          width: 20%;
+        }
+        h2 {
+          margin-top: 22px;
+          line-height: 110%;
+        }
+      }
+      &.withbutton h2 {
+        max-width: 60%;
       }
     }
   }
-}
+
 .risk-container-couple {
   .risk-item-couple {
     vertical-align: top;
@@ -876,7 +882,7 @@ a {
       padding: 10px 0;
       text-align: center;
       width: 20%;
-      border: 0,0,1px,0 solid $bg-gray;
+      border-bottom: 1px solid $bg-gray;
       &.disease-head {
         border-bottom: 0;
         padding-bottom: 0;

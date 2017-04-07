@@ -87,10 +87,9 @@ $( document ).ready(function() {
             $(".research-toggle").css('background-color', "white");
             $(".research-toggle").css('color', "#4D4D4D");
             $(".research-toggle").css('box-shadow', "0px 0px 3px #ddd");
-            $(".fixedheader-couple-text").css('font-size', "12px");
-
-            $(".button-action-plan").css('width', '103px');
-            $(".button-action-plan").css('height', '18px');
+            // $(".fixedheader-couple-text").css('font-size', "12px");
+            // $(".button-action-plan").css('width', '103px');
+            // $(".button-action-plan").css('height', '18px');
             $(".fixedheader-couple-button").css('padding-top', '0px');
             top = 1;
           }
