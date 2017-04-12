@@ -707,7 +707,18 @@ a {
       }
     }
   }
-
+  .back-button {
+    margin-left: 8px;
+    p {
+      display: none;
+    }
+    .back-arrow {
+      width: 30px;
+      height: 21px;
+      background: url("../img/back-arrow.png") no-repeat center;
+      background-size: contain;
+    }
+  }
   .button {
     position: static;
     margin: 0 0 10px 23px;
@@ -716,7 +727,7 @@ a {
   .research-toggle {
     width: 125px;
     height: 35px;
-    margin-left: 75px;
+    margin-left: 68px;
     .show-research {
       display: none;
     }
