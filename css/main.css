@@ -13,7 +13,7 @@ body {
 
 #results-fixedheader-notcarrier {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   display: none;
   height: 66px;
   width: 100%;
@@ -27,7 +27,7 @@ body {
 
 #results-fixedheader-carrier {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   display: none;
   height: 66px;
   width: 100%;
@@ -520,28 +520,26 @@ a {
     margin: 0 0 10px 23px;
     float: none; }
   .research-toggle {
-    display: block;
-    background-color: #45C0C1;
-    border-radius: 0 0 20px 0px;
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
-    color: white;
-    z-index: 1;
-    margin: -3px 0 0 0;
     width: 125px;
     height: 35px;
-    text-align: center; }
-    .research-toggle p {
-      margin: 0;
-      padding-top: 5px; }
+    margin-left: 75px; }
     .research-toggle .show-research {
-      display: block; }
+      display: none; }
     .research-toggle .hide-research {
       display: none; }
+    .research-toggle .research-icon {
+      display: block;
+      width: 40px;
+      height: 23px;
+      background: url("../img/user-research-off.png") no-repeat center;
+      background-size: contain; }
     .research-toggle.research-on .show-research {
       display: none; }
     .research-toggle.research-on .hide-research {
-      display: block; }
+      display: none; }
+    .research-toggle.research-on .research-icon {
+      background: url("../img/user-research-on.png") no-repeat center;
+      background-size: contain; }
   #individual-pie-section #individual-noncarrier-pie {
     width: 100%;
     height: 405px; }
@@ -570,7 +568,7 @@ a {
   background-color: white;
   box-shadow: 0px 0px 5px #ddd;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   width: 100%;
   padding-top: 14px; }
   .results-fixedheader-couple .fixedheader-container {
