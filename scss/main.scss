@@ -85,6 +85,7 @@ body {
       width: 92%;
       .button-action-plan {
       width: 105px;
+      margin-left: 5px;
       }
     }
   }
@@ -136,7 +137,7 @@ body {
   }
 }
 .result-graphics-spacing {
-	float: left;
+  float: left;
   width: 30%;
 	margin-right: 1.5%;
   margin-left: 1.5%;
@@ -150,11 +151,14 @@ body {
 }
 .noncarrier-result {
 	max-width: 700px;
-  margin: auto;
+  
 	margin-top: 48px;
+  margin-bottom:20px;
+
+
 }
 .carrier-result {
-	height: 247px;
+	height: 270px;
 	max-width: 700px;
 	padding-top: 16px;
   margin: auto;
@@ -185,6 +189,11 @@ body {
 		}
 	}
 }
+
+.child-carrier-status {
+  display: block;
+}
+
 #individual-pie-section {
 	text-align: center;
 	#individual-noncarrier-pie {
@@ -824,7 +833,7 @@ a {
     }
   }
 }
-  @media only screen and (max-width : 768px) {
+  @media only screen and (max-width : $tablet) {
     .results-fixedheader-couple {
       .fixedheader-container {
         width: 92%;

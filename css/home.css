@@ -276,6 +276,19 @@ a {
     right: 0; }
     .header-links .hide {
       display: none; }
+    .header-links .make-icon p {
+      display: none; }
+    .header-links .make-icon div {
+      display: inline-block;
+      height: 20px;
+      width: 25px;
+      margin: 18px 18px 0 0; }
+      .header-links .make-icon div.contact-icon {
+        background: url("../img/contact.png") no-repeat center;
+        background-size: contain; }
+      .header-links .make-icon div.whitepaper-icon {
+        background: url("../img/whitepaper.png") no-repeat center;
+        background-size: contain; }
   .home-header .header-title {
     padding-left: 20px; }
   .banner {
@@ -309,7 +322,7 @@ a {
       padding: 15px 0 15px 0;
       margin-bottom: 10px;
       width: 47%;
-      height: 312px;
+      height: 350px;
       display: inline-block;
       vertical-align: top; }
       .example-container .example-list li.inactive {
