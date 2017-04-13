@@ -105,22 +105,21 @@
 										Continue with your family planning. No further action is recommended.
 									</h2>
 
-									<div style="padding-bottom:220px;">
-										<div class="noncarrier-result">
-											<div class="result-graphics-spacing">
-												<img src="/img/ind-noncarrier.png">
-												<h2 class="result-graphics-text">{{patient1}} is unlikely to be a carrier</h2>
-											</div>
-											<div class="result-graphics-spacing">
-												<img src="/img/child.png">
-												<h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
-											</div>
-											<div class="result-graphics-spacing">
-												<img src="/img/ind-noncarrier.png">
-												<h2 class="result-graphics-text">{{patient2}} is unlikely to be a carrier</h2>
-											</div>
+									<div class="noncarrier-result">
+										<div class="result-graphics-spacing">
+											<img src="/img/ind-noncarrier.png">
+											<h2 class="result-graphics-text">{{patient1}} is unlikely to be a carrier</h2>
+										</div>
+										<div class="result-graphics-spacing">
+											<img src="/img/child.png">
+											<h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
+										</div>
+										<div class="result-graphics-spacing">
+											<img src="/img/ind-noncarrier.png">
+											<h2 class="result-graphics-text">{{patient2}} is unlikely to be a carrier</h2>
 										</div>
 									</div>
+
 								</div>
 							{{/riskStatus1}}
 
@@ -134,27 +133,24 @@
                     Continue with your family planning. No further action is recommended.
                   </h2>
 
-                  <div style="padding-bottom:220px;">
-                    <div class="noncarrier-result">
-                      <div class="result-graphics-spacing">
-                        <img src="/img/ind-carrier.png">
-                        <h2 class="result-graphics-text">{{patient1}} is a carrier for {{diseasePositive}}</h2>
-                      </div>
-                      <div class="result-graphics-spacing">
-                        <img src="/img/child.png">
-                        <h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
-                      </div>
-                      <div class="result-graphics-spacing">
-                        <img src="/img/ind-noncarrier.png">
-                        <h2 class="result-graphics-text">{{patient2}} is unlikely to be a carrier</h2>
-                      </div>
+                  <div class="noncarrier-result">
+                    <div class="result-graphics-spacing">
+                      <img src="/img/ind-carrier.png">
+                      <h2 class="result-graphics-text">{{patient1}} is a carrier for {{patient1CarrierPositive}}</h2>
+                    </div>
+                    <div class="result-graphics-spacing">
+                      <img src="/img/child.png">
+                      <h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
+                    </div>
+                    <div class="result-graphics-spacing">
+                      <img src="/img/ind-noncarrier.png">
+                      <h2 class="result-graphics-text">{{patient2}} is unlikely to be a carrier</h2>
                     </div>
                   </div>
 
-                  <div style="margin-top:9%;">
-                    <p>Each of your children has a 50% chance of being a carrier for each of the diseases that you or your partner carry. When your children grow up it will be helpful to inform them of this possibility. </p>
-                    <a>Learn why</a>
-                  </div>
+                  <p>Each of your children has a 50% chance of being a carrier for each of the diseases that you or your partner carry. When your children grow up it will be helpful to inform them of this possibility. </p>
+                  <a>Learn why</a>
+
                 </div>
 							{{/riskStatus2}}
 
@@ -171,10 +167,10 @@
                     Continue with your family planning. No further action is recommended.
                   </h2>
 
-                  <div class="noncarrier-result" style="margin-bottom:450px;">
+                  <div class="noncarrier-result">
                     <div class="result-graphics-spacing" style="margin-top:27%;">
                       <img src="/img/ind-carrier.png">
-                      <h2 class="result-graphics-text">{{patient1}} is a carrier for Tay-Sachs</h2>
+                      <h2 class="result-graphics-text">{{patient1}} is a carrier for {{patient1CarrierPositive}}</h2>
                     </div>
                     <div class="result-graphics-spacing">
                       <img src="/img/child-couple-noncarrier.png">
@@ -182,7 +178,7 @@
                     </div>
                     <div class="result-graphics-spacing" style="margin-top:27%;">
                       <img src="/img/ind-carrier.png">
-                      <h2 class="result-graphics-text">{{patient2}} is a carrier for Cystic fibrosis</h2>
+                      <h2 class="result-graphics-text">{{patient2}} is a carrier for {{patient2CarrierPositive}}</h2>
                     </div>
                   </div>
 
@@ -201,30 +197,27 @@
 										{{patient1}} and {{patient2}} are both carriers for {{diseasePositive}}
 									</h2>
 
-									<div style="padding-bottom:220px;">
-										<div class="noncarrier-result">
-											<div class="result-graphics-spacing" style="margin-top:27%;">
-												<img src="/img/couple-carrier.png">
-												<h2 class="result-graphics-text">{{patient1}} is a carrier for {{diseasePositive}}</h2>
-											</div>
-											<div class="result-graphics-spacing" style="margin-top:17px">
-												<img src="/img/child-couple-carrier.png">
-												<h2 class="result-graphics-text">Your children have a 25% chance of inheriting {{diseasePositive}}</h2>
-											</div>
-											<div class="result-graphics-spacing" style="margin-top:27%;">
-												<img src="/img/couple-carrier.png">
-												<h2 class="result-graphics-text">{{patient2}} is a carrier for {{diseasePositive}}</h2>
-											</div>
+									<div class="noncarrier-result">
+										<div class="result-graphics-spacing" style="margin-top:27%;">
+											<img src="/img/couple-carrier.png">
+											<h2 class="result-graphics-text">{{patient1}} is a carrier for {{diseasePositive}}</h2>
 										</div>
-                  </div>
+										<div class="result-graphics-spacing" style="margin-top:17px">
+											<img src="/img/child-couple-carrier.png">
+											<h2 class="result-graphics-text">Your children have a 25% chance of inheriting {{diseasePositive}}</h2>
+										</div>
+										<div class="result-graphics-spacing" style="margin-top:27%;">
+											<img src="/img/couple-carrier.png">
+											<h2 class="result-graphics-text">{{patient2}} is also a carrier for {{diseasePositive}}</h2>
+										</div>
+									</div>
 
-                  <div style="margin-top:41%;">
                     <a href="#">
       								<div class="button-action-plan">
       									<p>Create Action Plan</p>
       								</div>
       							</a>
-									</div>
+
 								</div>
 							{{/riskStatus4}}
 						</div>

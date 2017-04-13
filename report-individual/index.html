@@ -82,52 +82,51 @@
 							<h2 class="subheader">Being a carrier is common and does not mean you have the disease.
 							<h2 class="subheader">We will be able to determine your children's risk once your partner is tested.</h2>
 							<div class="carrier-result">
-								<div>
+								<div class="result-component">
 									<img src="/img/ind-carrier.png">
-									<h2>{{name}} is a carrier for Cystic fibrosis, Tay-sachs, and Thalessemia</h2>
+									<h2>{{name}} is a carrier for {{filteredDiseases}}</h2>
 								</div>
-								<div>
+								<div class="result-component">
 									<img src="/img/symbol-plus.png">
 								</div>
-								<div>
+								<div class="result-component">
 									<img src="/img/ind-unknown.png">
 									<h2>Partner's carrier status undetermined</h2>
 								</div>
-								<div>
+								<div class="result-component">
 									<img src="/img/symbol-equal.png">
 								</div>
-								<div>
+								<div class="result-component">
 									<img src="/img/child-unknown.png">
 									<h2 style="text-align:center">Children's risk undetermined</h2>
 								</div>
 							</div>
-
-							<div style="margin-top:25px;">
+							<div class="action-container">
 								<h2>We highly recommend to</h2>
 								<h2 class="result-button" id="partners-test-button">Request partner's test</h2>
 							</div>
+
 						{{/isCarrier}}
 
 						{{^isCarrier}}
-							<div style="padding-bottom:220px;">
-								<h1 class="subheader">{{name}} is unlikely to be a&nbsp;carrier</h1>
-								<h2 class="subheader">Your children are unlikely to inherit any of the diseases we've tested.</h2>
-								<h2 class="subheader"> Continue on with your family planning. No further action is recommended.</h2>
-								<div class="noncarrier-result">
-									<div class="result-graphics-spacing">
-										<img src="/img/ind-noncarrier.png">
-										<h2 class="result-graphics-text">{{name}} is unlikely to be a carrier</h2>
-									</div>
-									<div class="result-graphics-spacing">
-										<img src="/img/child.png">
-										<h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
-									</div>
-									<div class="result-graphics-spacing">
-										<img src="/img/ind-unknown.png">
-										<h2 class="result-graphics-text">Partner's carrier status is not necessary</h2>
-									</div>
+							<h1 class="subheader">{{name}} is unlikely to be a&nbsp;carrier</h1>
+							<h2 class="subheader">Your children are unlikely to inherit any of the diseases we've tested.</h2>
+							<h2 class="subheader"> Continue on with your family planning. No further action is recommended.</h2>
+							<div class="noncarrier-result">
+								<div class="result-graphics-spacing">
+									<img src="/img/ind-noncarrier.png">
+									<h2 class="result-graphics-text">{{name}} is unlikely to be a carrier</h2>
+								</div>
+								<div class="result-graphics-spacing">
+									<img src="/img/child.png">
+									<h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
+								</div>
+								<div class="result-graphics-spacing">
+									<img src="/img/ind-unknown.png">
+									<h2 class="result-graphics-text">Partner's carrier status is not necessary</h2>
 								</div>
 							</div>
+
 						{{/isCarrier}}
 					</div>
 

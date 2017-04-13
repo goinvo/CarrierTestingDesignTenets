@@ -39,6 +39,17 @@ $( document ).ready(function() {
           }
         });
 
+        $.each(couple.diseases, function(i, disease) {
+          if (disease.patient1IsCarrier) {
+            couple.patient1CarrierPositive = disease.name;
+          }
+        });
+        $.each(couple.diseases, function(i, disease) {
+          if (disease.patient2IsCarrier) {
+            couple.patient2CarrierPositive = disease.name;
+          }
+        });
+
         console.log(risks);
 
         return risks;

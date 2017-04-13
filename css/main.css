@@ -93,11 +93,13 @@ body {
   margin-top: 50px; }
 
 @media only screen and (max-width: 768px) {
+  .container-white {
+    padding: 60px 5% 50px 5%; }
   .container-gray {
     width: 92%; } }
 
 .result-graphics-spacing {
-  float: left;
+  display: inline-block;
   width: 30%;
   margin-right: 1.5%;
   margin-left: 1.5%; }
@@ -109,32 +111,43 @@ body {
 
 .noncarrier-result {
   max-width: 700px;
-  margin-top: 48px;
-  margin-bottom: 20px; }
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  margin: auto;
+  display: flex; }
+  .noncarrier-result div {
+    flex-grow: 1; }
 
 .carrier-result {
   height: 270px;
   max-width: 700px;
-  padding-top: 16px;
-  margin: auto; }
-  .carrier-result div {
-    float: left; }
-  .carrier-result h2 {
+  margin: auto;
+  margin-top: 40px;
+  display: flex; }
+  .carrier-result .result-component {
+    flex-grow: 1; }
+    .carrier-result .result-component h2 {
+      text-align: center; }
+    .carrier-result .result-component:nth-child(1), .carrier-result .result-component:nth-child(3), .carrier-result .result-component:nth-child(5) {
+      width: 28%; }
+      .carrier-result .result-component:nth-child(1) img, .carrier-result .result-component:nth-child(3) img, .carrier-result .result-component:nth-child(5) img {
+        width: 100%; }
+    .carrier-result .result-component:nth-child(2) {
+      width: 7%; }
+      .carrier-result .result-component:nth-child(2) img {
+        width: 70%;
+        margin: 109% 0% 0% 36%; }
+    .carrier-result .result-component:nth-child(4) {
+      width: 7%; }
+      .carrier-result .result-component:nth-child(4) img {
+        width: 70%;
+        margin: 125% 0% 0% 45%; }
+
+.action-container {
+  text-align: center; }
+  .action-container h2 {
     text-align: center; }
-  .carrier-result div:nth-child(1), .carrier-result div:nth-child(3), .carrier-result div:nth-child(5) {
-    width: 28%; }
-    .carrier-result div:nth-child(1) img, .carrier-result div:nth-child(3) img, .carrier-result div:nth-child(5) img {
-      width: 100%; }
-  .carrier-result div:nth-child(2) {
-    width: 7%; }
-    .carrier-result div:nth-child(2) img {
-      width: 70%;
-      margin: 109% 0% 0% 36%; }
-  .carrier-result div:nth-child(4) {
-    width: 7%; }
-    .carrier-result div:nth-child(4) img {
-      width: 70%;
-      margin: 125% 0% 0% 45%; }
 
 .child-carrier-status {
   display: block; }
@@ -481,6 +494,7 @@ a {
   width: 200px;
   height: 37px;
   margin: auto;
+  margin-top: 30px;
   border: 2.5px solid #45C0C1;
   border-radius: 2px;
   background-color: #45C0C1; }

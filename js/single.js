@@ -39,6 +39,14 @@ $( document ).ready(function() {
         patient.diseases = filterDiseases(patientDiseases, false);
       }
 
+      $.each(patient.diseases, function(i, disease) {
+        if (patient.isCarrier) {
+          patient.carrierPositive = disease.name;
+        }
+      });
+
+
+
       var template = $('#carrier-template').html();
       var html = Mustache.to_html(template, patient);
       $('#results').html(html);
