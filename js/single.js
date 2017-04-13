@@ -28,6 +28,8 @@ $( document ).ready(function() {
         for (i = 0; i < diseases.length; i++) {
           if (diseases[i].carrier === isCarrier) {
             filteredDiseases.push(diseases[i]);
+            //var carrierDisease = filteredDiseases[0].name;
+            //console.log(carrierDisease);
           }
         }
         return filteredDiseases;
@@ -39,11 +41,13 @@ $( document ).ready(function() {
         patient.diseases = filterDiseases(patientDiseases, false);
       }
 
-      $.each(patient.diseases, function(i, disease) {
-        if (patient.isCarrier) {
-          patient.carrierPositive = disease.name;
-        }
-      });
+      // $.each(patient.diseases, function(i, disease) {
+      //   if (patient.isCarrier) {
+      //     console.log(disease.name);
+      //     for (i = 0; i < diseases.length; i++)
+      //     patient.carrierPositive = disease.name;
+      //   }
+      // });
 
 
 

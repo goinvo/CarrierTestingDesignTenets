@@ -315,16 +315,17 @@ a {
       height: 55px; }
   .example-container .example-list {
     list-style: none;
-    padding-left: 0; }
-    .example-container .example-list.example-list-second li {
-      height: 410px; }
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap; }
     .example-container .example-list a:nth-child(even) li {
       margin-left: 2%; }
     .example-container .example-list li {
       padding: 15px 0 15px 0;
       margin-bottom: 10px;
-      width: 47%;
-      height: 350px;
+      flex-grow: 1;
+      flex-basis: 50%;
       display: inline-block;
       vertical-align: top; }
       .example-container .example-list li.inactive {
