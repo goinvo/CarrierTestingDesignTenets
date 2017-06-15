@@ -320,8 +320,6 @@ a {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap; }
-    .example-container .example-list a:nth-child(even) li {
-      margin-left: 2%; }
     .example-container .example-list li {
       padding: 15px 0 15px 0;
       margin-bottom: 10px;
