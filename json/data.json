@@ -53,7 +53,7 @@
           {
             "carrier": true,
             "name": "Cystic Fibrosis",
-            "description": "Impaired lung and digestive function due to thick, sticky mucus."
+            "description": "Characterized by impaired lung and digestive function due to thick, sticky mucus. The disease typically worsens over time and currently has no cure."
           },
           {
             "carrier": false,
@@ -62,8 +62,8 @@
           },
           {
             "carrier": true,
-            "name": "Tay Sachs",
-            "description": "Muscle weakness, loss of muscle coordination, problems with movement, speech problems, and mental illness."
+            "name": "Tay-Sachs Disease",
+            "description": "Loss of motor skills, seizures, vision and hearling loss, intellectual disability, and/or paralysis."
           },
           {
             "carrier": true,
@@ -72,6 +72,5 @@
           }
         ]
       }
-
     ]
 }
