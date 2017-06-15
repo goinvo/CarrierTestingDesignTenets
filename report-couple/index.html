@@ -135,21 +135,21 @@
 
                   <div class="noncarrier-result">
                     <div class="result-graphics-spacing">
-                      <img src="/img/ind-carrier.png">
-                      <h2 class="result-graphics-text">{{patient1}} is a carrier for {{patient1CarrierPositive}}</h2>
+                      <img src="/img/ind-noncarrier.png">
+                      <h2 class="result-graphics-text">{{patient1}} is unlikely to be a carrier</h2>
                     </div>
                     <div class="result-graphics-spacing">
                       <img src="/img/child.png">
                       <h2 class="result-graphics-text">Your children are unlikely to have any of the diseases we tested</h2>
                     </div>
                     <div class="result-graphics-spacing">
-                      <img src="/img/ind-noncarrier.png">
-                      <h2 class="result-graphics-text">{{patient2}} is unlikely to be a carrier</h2>
+                      <img src="/img/ind-carrier.png">
+                      <h2 class="result-graphics-text">{{patient2}} is a carrier for {{patient2CarrierPositive}}</h2>
                     </div>
                   </div>
 
-                  <p>Each of your children has a 50% chance of being a carrier for each of the diseases that you or your partner carry. When your children grow up it will be helpful to inform them of this possibility. </p>
-                  <a>Learn why</a>
+                  <p>Each of your children has a 50% chance of being a carrier for each disease that your donor carries. When your children grow up it will be helpful to inform them of this possibility.</p>
+                  <a href="#">Learn why</a>
 
                 </div>
 							{{/riskStatus2}}
@@ -314,11 +314,11 @@
 							<hr class="lighter-line"></hr>
 
 							{{#isOverallCarrier}}
-								<p class="unlikely-carrier-margin">You are unlikely to be a carrier of any of the other <a href="#">100 diseases tested</a>.</p>
+								<p class="unlikely-carrier-margin">You are unlikely to be a carrier of any of the other <a href="#">144 diseases tested</a>.</p>
 							{{/isOverallCarrier}}
 
 							{{^isOverallCarrier}}
-								<p class="unlikely-carrier-margin">You are unlikely to be a carrier to any of the other <a href="#">143 diseases tested.</a></p>
+								<p class="unlikely-carrier-margin">You are unlikely to be a carrier to any of the other <a href="#">141 diseases tested.</a></p>
 							{{/isOverallCarrier}}
 
 					</div>
@@ -347,7 +347,7 @@
 
 						<div class="content">
 							<div class="content-item">
-								<h2>A counselor is always available</h2>
+								<h2>A counselor is available</h2>
 								<p>Still have questions? Review your results with a licensed genetic
 									counselor. We are available 9am-5pm Monday through Friday.</p>
 							</div>
@@ -398,7 +398,7 @@
 
             <div class="content">
               <div class="content-item">
-                <h2>A counselor is always available</h2>
+                <h2>A counselor is available</h2>
                 <p>Still have questions? Review your results with a licensed genetic
                   counselor. We are available 9am-5pm Monday through Friday.</p>
               </div>
@@ -446,13 +446,13 @@
             <h2>Send your report to your family or doctor</h2>
 
     				{{#isOverallCarrier}}
-    					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
+    					<p>If you have siblings, they have a 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
     					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
     					<br>
     				{{/isOverallCarrier}}
 
     				{{^isOverallCarrier}}
-							<p style="margin-bottom:0;">If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
+							<p style="margin-bottom:0;">If you have siblings, they have a 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
 							<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons</a> before telling family.</p>
 							<br>
     				{{/isOverallCarrier}}

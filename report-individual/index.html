@@ -182,7 +182,7 @@
 	  									{{/diseases}}
 
 											{{^isCarrier}}
-												<p class="unlikely-carrier-margin">And 146 more diseases tested...</p>
+												<p class="unlikely-carrier-margin">And <a href="#">146 more diseases tested</a>...</p>
 											{{/isCarrier}}
 
 	  								</ul>
@@ -267,7 +267,7 @@
 											</div>
 											<div class="card-item {{#carrier}}item-carrier{{/carrier}}">
 												<div style="width:80%;">
-													<a href="#">{{name}}</a>
+													<a href="#" class="disease-name">{{name}}</a>
 													<p>{{description}}</p>
 													<p style="opacity:0.4;">Children's risk can be determined by partner's test</p>
 												</div>
@@ -308,7 +308,7 @@
 
 				<div class="content">
           <div class="content-item">
-            <h2>A counselor is always available</h2>
+            <h2>A counselor is available</h2>
 					  <p>Still have questions? Review your results with a licensed genetic
               counselor. We are available 9am-5pm Monday through Friday.</p>
           </div>
@@ -326,7 +326,7 @@
             <h2>Send your report to your family or doctor</h2>
 
     				{{#isCarrier}}
-    					<p>If you have siblings, they have 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
+    					<p>If you have siblings, they have a 50% chance of being a carrier of the same diseases as you. Invitees will receive an email allowing them to view your report. You can revoke this access at any time.
     					<br><br>Some siblings appreciate knowing this information, but some do not. <a href="#">Consider these reasons before telling family.</a></p>
     					<br>
     				{{/isCarrier}}

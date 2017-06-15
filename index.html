@@ -10,8 +10,8 @@
 		<script src="vendor/jquery.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<meta charset=utf-8 />
-		<script type="text/javascript" src="node_modules/mustache/mustache.js" ></script>
-		<script type="text/javascript" src="json/data.json" ></script>
+		<script type="text/javascript" src="node_modules/mustache/mustache.js"></script>
+		<!-- <script type="text/javascript" src="json/data.json"></script> -->
 		<script src="js/home.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,11 +21,9 @@
 
 		  ga('create', 'UA-10273473-22', 'auto');
 		  ga('send', 'pageview');
-
 		</script>
 	</head>
   <body>
-
 
 		<div class="home-container">
 
@@ -37,7 +35,7 @@
 					<p>White Paper</p>
 					<div class="whitepaper-icon"></div>
 				</a>
-				<a  class="make-icon" href="mailto:hello@goinvo.com">
+				<a  class="make-icon" href="mailto:hello@goinvo.com?subject=Carrier Testing Reports">
 					<p>Contact</p>
 					<div class="contact-icon"></div>
 				</a>
@@ -58,11 +56,9 @@
 				<div class="scrolling-content validation-container">
 					<div class="validation">
 
-
-
 						<a href="#validated">
 							<div class="validation-item">
-								<p>Clinician & patient validated</p>
+								<p>Clinician &amp; patient validated</p>
 							</div>
 						</a>
 
@@ -85,26 +81,14 @@
 
 			</div>
 
-
-
-
 			<div class="home-content-container">
 
-
 				<div class="overview content-chunk">
-					<p>
-						Genetic carrier testing results are complicated. We typically
-						don't have the expertise to understand our
-						genetic results, let alone know what to do with them. In fact,
-						the results are often too complex for our doctors to
-						interpret.<br><br>
-						Based on secondary and user research interviewing over 50 patients and clinical professionals,
-						this framework is a proposed set of design guidelines for delivering
-						digitized carrier testing results in a way that patients and clinicians can
-						feel a sense of understanding and empowerment.
+					<p>Genetic carrier testing results are complicated. We typically don't have the expertise to understand our genetic results, let alone know what to do with them. In fact, the results are often too complex for our doctors to interpret.</p>
+
+					<p>Based on secondary and user research interviewing over 50 patients and clinical professionals, this framework is a proposed set of design guidelines for delivering digitized carrier testing results in a way that patients and clinicians can feel a sense of understanding and empowerment.
 					</p>
 				</div>
-
 
 				<div id="reports" class="example-container content-chunk">
 					<h2>Report Examples</h2>
@@ -245,7 +229,7 @@
 								</p>
 							</div>
 							<a class="button" href="https://github.com/goinvo/CarrierTestingDesignTenets" target="_blank">
-								<p>Use the SCSS</p>
+								<p>Use the code</p>
 							</a>
 						</li>
 						<li>
@@ -257,7 +241,7 @@
 									organization? Let's work together to create something impactful and beautiful.
 								</p>
 							</div>
-							<a id="validated" class="button" href="mailto:hello@goinvo.com">
+							<a id="validated" class="button" href="mailto:hello@goinvo.com?subject=Let's work together on a genomics project">
 								<p>Let's work together</p>
 							</a>
 						</li>
@@ -279,13 +263,6 @@
 						</li>
 					</ul>
 				</div>
-
-				<!-- <div class="improve-container content-chunk">
-					<h2>Improve this tool</h2>
-					<p>Everyone is welcome to contribute. Get involved by providing clinical or patient-focused feedback, joining the community, submitting code, and evolving the service.</p>
-					<a class="button" href="https://github.com/goinvo/CarrierTestingDesignTenets"><p>Interrogate the code</p></a>
-					<a id="validated" class="button second-button" href="mailto:hello@goinvo.com"><p>Let's work together</p></a>
-				</div> -->
 
 				<div class="u-research content-chunk">
 					<h2>See the Research</h2>
@@ -363,22 +340,17 @@
 						in the industry have provided essential feedback on clinical feasibility and scientific accuracy.
 					</p>
 
-
 					<a class="button" target="_blank" href="https://drive.google.com/open?id=0Bz7cDkwBpA67TXN5aHpxQUhOMnc"><p>See Documentation</p></a>
-
 
 				</div>
 
 				<div class="limitations content-chunk">
 					<h2>Design Limitations</h2>
 					<p>
-						While this framework accommodates the most common types of autosomal recessive carrier results,
-						it is important to note that not ALL results are currently accommodated.
-						Below are important limitations in the report capabilities.
+						While this framework accommodates the most common types of autosomal recessive carrier results, it is important to note that not ALL results are currently accommodated. Below are important limitations in the report capabilities.
 					</p>
 					<ul>
-						<li>Sample  patient, disease, limitations, and test detail content in the
-							report designs should be specific to your organization, and is therefore synthetic and not intended for production.</li>
+						<li>Sample  patient, disease, limitations, and test detail content in the report designs should be specific to your organization, and is therefore synthetic and not intended for production.</li>
 						<li>Non-autosomal recessive disease carrier status (X-linked, autosomal dominant, mitochondrial, deNovo, etc.) is not supported.</li>
 						<li>Care team permissions design is to be determined.</li>
 						<li>Disease detail design is to be determined.</li>
@@ -389,7 +361,7 @@
 				<div class="about content-chunk">
 					<h2>Who We Are</h2>
 					<a class="invo-img" data-flickr-embed="true"  href="https://www.flickr.com/photos/juhansonin/19534866918/in/photostream/"><img src="https://c7.staticflickr.com/1/552/19534866918_10f8d21825_c.jpg"></a>
-					<p><a target="_blank" href="http://www.goinvo.com/">GoInvo</a> helps healthcare technology companies design magical software for personalized medicine. We work with organizations such as 3M, Johnson & Johnson, Walgreens, Mount Sinai Hospital, Partners Healthcare, National Insititutes of Health, Personal Genome Project/Open Humans. We’re located in Arlington, Massachusetts.</p>
+					<p><a target="_blank" href="http://www.goinvo.com/">GoInvo</a> helps healthcare technology companies design magical software for personalized medicine. We work with organizations such as 3M, Johnson &amp; Johnson, Walgreens, Mount Sinai Hospital, Partners Healthcare, National Insititutes of Health, and Personal Genome Project/Open Humans. We're located in Arlington, Massachusetts.</p>
 				</div>
 
 			</div>
