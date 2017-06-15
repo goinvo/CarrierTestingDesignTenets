@@ -144,7 +144,8 @@ a {
 
 .example-container .example-list {
   list-style: none;
-  padding-left: 0; }
+  padding-left: 0;
+  margin-bottom: 50px; }
   .example-container .example-list li {
     padding: 15px 0 15px 0;
     border: 1px solid #E0E0E0;
