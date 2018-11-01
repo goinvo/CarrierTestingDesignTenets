@@ -25,7 +25,4 @@ Mustache.js
 
 jQuery
 
-# Questions or Concerns
-
-Email us at hello@goinvo.com
-
+### For guidance integrating Carrier Testing Design Tenets into your product or service, contact us at hello@goinvo.com. ###
